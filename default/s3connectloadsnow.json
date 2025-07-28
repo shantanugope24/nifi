@@ -19,36 +19,6 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "afabacbf-08ab-3483-8b04-8449f1cdef2f",
-        "name" : "RouteOnAttribute",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "0128fd49-d9d0-3a79-864a-4a3aad413243",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "dc074388-3190-35cf-9854-e9c1b370e0d3",
-        "name" : "FetchS3Object",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 10
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "dc074388-3190-35cf-9854-e9c1b370e0d3",
         "name" : "FetchS3Object",
         "type" : "PROCESSOR"
@@ -71,6 +41,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 1
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f91bca02-e793-364a-9aac-8519c5291099",
+        "name" : "Create CSV Table",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "643361cb-1d8e-3651-af83-4c07f14881b5",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "csvFILES" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "a4510b98-dc03-3ec5-830b-b2435695f16d",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 16
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -299,36 +299,6 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 8
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "f91bca02-e793-364a-9aac-8519c5291099",
-        "name" : "Create CSV Table",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "a9bb53ef-6c56-37de-b119-4d8185d60731",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "csvFiles" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "afabacbf-08ab-3483-8b04-8449f1cdef2f",
-        "name" : "RouteOnAttribute",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 11
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -1434,8 +1404,8 @@
       "name" : "EncryptContentAge",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 256.0,
-        "y" : -64.0
+        "x" : 360.0,
+        "y" : -152.0
       },
       "properties" : {
         "Public Key Source" : "PROPERTIES",
@@ -2228,6 +2198,56 @@
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
+        "artifact" : "runtime-salesforce-processors-nar",
+        "group" : "com.snowflake.openflow.runtime",
+        "version" : "2025.7.15.16"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "877a835c-b5a0-3905-ae67-f9b33ea3e3bc",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "AbortQueryJob",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -904.0,
+        "y" : -320.0
+      },
+      "properties" : {
+        "Job ID" : "${jobId}"
+      },
+      "propertyDescriptors" : {
+        "Job ID" : {
+          "displayName" : "Job ID",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Job ID",
+          "sensitive" : false
+        },
+        "Salesforce Client" : {
+          "displayName" : "Salesforce Client",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Salesforce Client",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "com.snowflake.openflow.runtime.processors.salesforce.AbortQueryJob",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
         "artifact" : "nifi-aws-nar",
         "group" : "org.apache.nifi",
         "version" : "2025.7.15.16"
@@ -2676,6 +2696,7 @@
       },
       "properties" : {
         "Routing Strategy" : "Route to Property name",
+        "csvFILES" : "${filename:endsWith('.csv')}",
         "zeroBytes" : "${s3.length:equals(0)}",
         "jsonFiles" : "${filename:endsWith('.json')}"
       },
@@ -2685,6 +2706,13 @@
           "dynamic" : false,
           "identifiesControllerService" : false,
           "name" : "Routing Strategy",
+          "sensitive" : false
+        },
+        "csvFILES" : {
+          "displayName" : "csvFILES",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "csvFILES",
           "sensitive" : false
         },
         "zeroBytes" : {
@@ -2730,8 +2758,8 @@
       "name" : "RouteOnAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 136.0,
-        "y" : 336.0
+        "x" : 1000.0,
+        "y" : 136.0
       },
       "properties" : {
         "Routing Strategy" : "Route to Property name",
@@ -3500,8 +3528,8 @@
       "name" : "DecryptContentAge",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 624.0,
-        "y" : -24.0
+        "x" : 744.0,
+        "y" : -56.0
       },
       "properties" : {
         "Private Key Source" : "PROPERTIES"
@@ -4191,6 +4219,6 @@
   "snapshotMetadata" : {
     "author" : "SHANTANU.GOPE@SNOWFLAKE.COM",
     "flowIdentifier" : "s3connectloadsnow",
-    "timestamp" : 1753455969121
+    "timestamp" : 1753725202365
   }
 }
