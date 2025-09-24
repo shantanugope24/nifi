@@ -1,4 +1,5 @@
 {
+  "externalControllerServices" : { },
   "flow" : {
     "createdTimestamp" : 1758738020065,
     "description" : "",
@@ -7,5 +8,5052 @@
     "name" : "test22",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "0.6.0-fd95df0",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ {
+        "x" : 336.0,
+        "y" : 424.0
+      }, {
+        "x" : 744.0,
+        "y" : 424.0
+      } ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "08c85e12-089e-359d-a6a3-dc7266d84e55",
+        "name" : "Log Failure",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1415cbd6-7520-3ba2-8339-7125cbce9fe4",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "id" : "64279d5e-68ce-3c1f-8859-a1eaf8bcda98",
+        "name" : "Failure",
+        "type" : "OUTPUT_PORT"
+      },
+      "zIndex" : 30
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "Fetch Excel file from AWS S3 bucket.",
+        "groupId" : "flow-contents-group",
+        "id" : "77df7ee1-9a4b-3485-a99a-52a7b1b05a5b",
+        "name" : "Fetch File From S3",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2b227ab7-562b-333d-b7f3-83832e56f1bc",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+        "id" : "e7e58367-eb56-30bb-8621-0ab55f4ca48c",
+        "name" : "Output File",
+        "type" : "OUTPUT_PORT"
+      },
+      "zIndex" : 32
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "id" : "7c2d0f1b-0184-312d-8d80-c711e1469dc7",
+        "name" : "Excel Data",
+        "type" : "INPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "71705e65-0ad9-3a11-96e6-07b72f4da9ea",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "id" : "cdf70af1-091f-34cf-bc87-2635aceb7847",
+        "name" : "Parsed Excel Data",
+        "type" : "OUTPUT_PORT"
+      },
+      "zIndex" : 35
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ {
+        "x" : 320.0,
+        "y" : -152.0
+      }, {
+        "x" : 744.0,
+        "y" : -152.0
+      } ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "08c85e12-089e-359d-a6a3-dc7266d84e55",
+        "name" : "Log Failure",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "af9e6a3e-90f4-31fa-9cb7-c3b442788335",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "Fetch Excel file from AWS S3 bucket.",
+        "groupId" : "flow-contents-group",
+        "id" : "77df7ee1-9a4b-3485-a99a-52a7b1b05a5b",
+        "name" : "Fetch File From S3",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 33
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+        "id" : "de9011f9-a14e-32e2-ba08-a0e34f3517bd",
+        "name" : "Input File",
+        "type" : "INPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "ce3a722c-7875-3851-85b8-e0e42188f799",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "Generate flow file telling that data should be ingested. The file is generated based on configured schedule.",
+        "groupId" : "flow-contents-group",
+        "id" : "7d999c3f-6d93-3f0f-9b67-ae43990fab37",
+        "name" : "Start Scheduled Ingestion",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 31
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "id" : "c87aaf3c-f9fc-3312-a08f-fa05b11d5dd8",
+        "name" : "Excel File",
+        "type" : "INPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "ec52be1e-33e5-3997-9025-100e2dea6ca2",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "Fetch Excel file from AWS S3 bucket.",
+        "groupId" : "flow-contents-group",
+        "id" : "77df7ee1-9a4b-3485-a99a-52a7b1b05a5b",
+        "name" : "Fetch File From S3",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 27
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ {
+        "x" : 320.0,
+        "y" : 112.0
+      } ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "08c85e12-089e-359d-a6a3-dc7266d84e55",
+        "name" : "Log Failure",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f0cc4914-7e8e-39ac-a631-46bff2b6cba8",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "id" : "d4569991-e1e4-3343-a212-5947fdde5db4",
+        "name" : "Failure",
+        "type" : "OUTPUT_PORT"
+      },
+      "zIndex" : 34
+    } ],
+    "controllerServices" : [ {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "runtime-snowflake-connection-service-nar",
+        "group" : "com.snowflake.openflow.runtime",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-standard-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.9.20"
+        },
+        "type" : "org.apache.nifi.dbcp.DBCPService"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1c249b1a-3267-3930-b7b9-fffa14a09538",
+      "name" : "Snowflake Connection Service",
+      "properties" : {
+        "Account" : "#{Snowflake Account Identifier}",
+        "Warehouse" : "#{Snowflake Warehouse}",
+        "User" : "#{Snowflake User}",
+        "Maximum Connections" : "10",
+        "Maximum Lifetime" : "30 minutes",
+        "Schema" : "#{Destination Schema}",
+        "Private Key Service" : "3551017f-aabe-33e3-a20d-c9ec6bb22f98",
+        "Connection Strategy" : "STANDARD",
+        "Connection Timeout" : "30 seconds",
+        "Role" : "#{Snowflake Role}",
+        "Idle Timeout" : "10 minutes",
+        "Authentication Strategy" : "KEY_PAIR",
+        "Database Name" : "#{Destination Database}"
+      },
+      "propertyDescriptors" : {
+        "Account" : {
+          "displayName" : "Account",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Account",
+          "sensitive" : false
+        },
+        "Warehouse" : {
+          "displayName" : "Warehouse",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Warehouse",
+          "sensitive" : false
+        },
+        "User" : {
+          "displayName" : "User",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "User",
+          "sensitive" : false
+        },
+        "Maximum Connections" : {
+          "displayName" : "Maximum Connections",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Connections",
+          "sensitive" : false
+        },
+        "Maximum Lifetime" : {
+          "displayName" : "Maximum Lifetime",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Lifetime",
+          "sensitive" : false
+        },
+        "Schema" : {
+          "displayName" : "Schema",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Schema",
+          "sensitive" : false
+        },
+        "Private Key Service" : {
+          "displayName" : "Private Key Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Private Key Service",
+          "sensitive" : false
+        },
+        "Connection Strategy" : {
+          "displayName" : "Connection Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Connection Strategy",
+          "sensitive" : false
+        },
+        "Connection Timeout" : {
+          "displayName" : "Connection Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Connection Timeout",
+          "sensitive" : false
+        },
+        "Role" : {
+          "displayName" : "Role",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Role",
+          "sensitive" : false
+        },
+        "Idle Timeout" : {
+          "displayName" : "Idle Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Idle Timeout",
+          "sensitive" : false
+        },
+        "Authentication Strategy" : {
+          "displayName" : "Authentication Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Authentication Strategy",
+          "sensitive" : false
+        },
+        "Database Name" : {
+          "displayName" : "Database Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Database Name",
+          "sensitive" : false
+        },
+        "Password" : {
+          "displayName" : "Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Password",
+          "sensitive" : true
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "com.snowflake.openflow.runtime.services.snowflake.SnowflakeConnectionService"
+    }, {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-record-serialization-services-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-standard-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.9.20"
+        },
+        "type" : "org.apache.nifi.serialization.RecordSetWriterFactory"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "220ab423-abac-3fd1-b897-c00f95f97df8",
+      "name" : "Json Record Writer",
+      "properties" : {
+        "Allow Scientific Notation" : "false",
+        "compression-level" : "1",
+        "Pretty Print JSON" : "false",
+        "compression-format" : "none",
+        "Schema Write Strategy" : "full-schema-attribute",
+        "suppress-nulls" : "never-suppress",
+        "output-grouping" : "output-array",
+        "schema-name" : "${schema.name}",
+        "schema-access-strategy" : "inherit-record-schema",
+        "schema-text" : "${avro.schema}"
+      },
+      "propertyDescriptors" : {
+        "schema-reference-reader" : {
+          "displayName" : "Schema Reference Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "schema-reference-reader",
+          "sensitive" : false
+        },
+        "schema-branch" : {
+          "displayName" : "Schema Branch",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-branch",
+          "sensitive" : false
+        },
+        "Allow Scientific Notation" : {
+          "displayName" : "Allow Scientific Notation",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Allow Scientific Notation",
+          "sensitive" : false
+        },
+        "compression-level" : {
+          "displayName" : "Compression Level",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "compression-level",
+          "sensitive" : false
+        },
+        "schema-cache" : {
+          "displayName" : "Schema Cache",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "schema-cache",
+          "sensitive" : false
+        },
+        "Timestamp Format" : {
+          "displayName" : "Timestamp Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Timestamp Format",
+          "sensitive" : false
+        },
+        "Date Format" : {
+          "displayName" : "Date Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Date Format",
+          "sensitive" : false
+        },
+        "Pretty Print JSON" : {
+          "displayName" : "Pretty Print JSON",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Pretty Print JSON",
+          "sensitive" : false
+        },
+        "compression-format" : {
+          "displayName" : "Compression Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "compression-format",
+          "sensitive" : false
+        },
+        "Schema Write Strategy" : {
+          "displayName" : "Schema Write Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Schema Write Strategy",
+          "sensitive" : false
+        },
+        "suppress-nulls" : {
+          "displayName" : "Suppress Null Values",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "suppress-nulls",
+          "sensitive" : false
+        },
+        "output-grouping" : {
+          "displayName" : "Output Grouping",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "output-grouping",
+          "sensitive" : false
+        },
+        "schema-name" : {
+          "displayName" : "Schema Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-name",
+          "sensitive" : false
+        },
+        "schema-registry" : {
+          "displayName" : "Schema Registry",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "schema-registry",
+          "sensitive" : false
+        },
+        "Time Format" : {
+          "displayName" : "Time Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Time Format",
+          "sensitive" : false
+        },
+        "schema-access-strategy" : {
+          "displayName" : "Schema Access Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-access-strategy",
+          "sensitive" : false
+        },
+        "schema-version" : {
+          "displayName" : "Schema Version",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-version",
+          "sensitive" : false
+        },
+        "schema-text" : {
+          "displayName" : "Schema Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-text",
+          "sensitive" : false
+        },
+        "Schema Reference Writer" : {
+          "displayName" : "Schema Reference Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Schema Reference Writer",
+          "sensitive" : false
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "org.apache.nifi.json.JsonRecordSetWriter"
+    }, {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-key-service-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-standard-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.9.20"
+        },
+        "type" : "org.apache.nifi.key.service.api.PrivateKeyService"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "3551017f-aabe-33e3-a20d-c9ec6bb22f98",
+      "name" : "Snowflake Private Key Service",
+      "properties" : {
+        "key-password" : "#{Snowflake Private Key Password}",
+        "key" : "#{Snowflake Private Key}"
+      },
+      "propertyDescriptors" : {
+        "key-password" : {
+          "displayName" : "Key Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "key-password",
+          "sensitive" : true
+        },
+        "key-file" : {
+          "displayName" : "Key File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "key-file",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "FILE" ]
+          },
+          "sensitive" : false
+        },
+        "key" : {
+          "displayName" : "Key",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "key",
+          "sensitive" : true
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "org.apache.nifi.key.service.StandardPrivateKeyService"
+    }, {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "runtime-snowflake-connection-service-nar",
+        "group" : "com.snowflake.openflow.runtime",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-standard-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.9.20"
+        },
+        "type" : "org.apache.nifi.database.dialect.service.api.DatabaseDialectService"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "587cab01-7a4d-3bc8-9f21-d47b9e5b281b",
+      "name" : "Snowflake Database Dialect Service",
+      "properties" : { },
+      "propertyDescriptors" : { },
+      "scheduledState" : "DISABLED",
+      "type" : "com.snowflake.openflow.runtime.services.snowflake.SnowflakeDatabaseDialectService"
+    }, {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-record-serialization-services-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-standard-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.9.20"
+        },
+        "type" : "org.apache.nifi.serialization.RecordReaderFactory"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "81f35f8e-cc4a-36e0-ab25-7221a7ad53d1",
+      "name" : "Json Record Reader",
+      "properties" : {
+        "Max String Length" : "20 MB",
+        "schema-application-strategy" : "SELECTED_PART",
+        "schema-name" : "${schema.name}",
+        "starting-field-strategy" : "ROOT_NODE",
+        "schema-access-strategy" : "schema-text-property",
+        "schema-text" : "${avro.schema}",
+        "Allow Comments" : "false"
+      },
+      "propertyDescriptors" : {
+        "schema-reference-reader" : {
+          "displayName" : "Schema Reference Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "schema-reference-reader",
+          "sensitive" : false
+        },
+        "schema-branch" : {
+          "displayName" : "Schema Branch",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-branch",
+          "sensitive" : false
+        },
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "schema-application-strategy" : {
+          "displayName" : "Schema Application Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-application-strategy",
+          "sensitive" : false
+        },
+        "Timestamp Format" : {
+          "displayName" : "Timestamp Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Timestamp Format",
+          "sensitive" : false
+        },
+        "schema-inference-cache" : {
+          "displayName" : "Schema Inference Cache",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "schema-inference-cache",
+          "sensitive" : false
+        },
+        "Date Format" : {
+          "displayName" : "Date Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Date Format",
+          "sensitive" : false
+        },
+        "schema-name" : {
+          "displayName" : "Schema Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-name",
+          "sensitive" : false
+        },
+        "starting-field-strategy" : {
+          "displayName" : "Starting Field Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "starting-field-strategy",
+          "sensitive" : false
+        },
+        "schema-registry" : {
+          "displayName" : "Schema Registry",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "schema-registry",
+          "sensitive" : false
+        },
+        "starting-field-name" : {
+          "displayName" : "Starting Field Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "starting-field-name",
+          "sensitive" : false
+        },
+        "Time Format" : {
+          "displayName" : "Time Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Time Format",
+          "sensitive" : false
+        },
+        "schema-access-strategy" : {
+          "displayName" : "Schema Access Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-access-strategy",
+          "sensitive" : false
+        },
+        "schema-version" : {
+          "displayName" : "Schema Version",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-version",
+          "sensitive" : false
+        },
+        "schema-text" : {
+          "displayName" : "Schema Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-text",
+          "sensitive" : false
+        },
+        "Allow Comments" : {
+          "displayName" : "Allow Comments",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Allow Comments",
+          "sensitive" : false
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "org.apache.nifi.json.JsonTreeReader"
+    }, {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-aws-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-aws-service-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.4.20"
+        },
+        "type" : "org.apache.nifi.processors.aws.credentials.provider.AwsCredentialsProviderService"
+      }, {
+        "bundle" : {
+          "artifact" : "nifi-aws-service-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.4.20"
+        },
+        "type" : "org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderService"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "8de3b31b-0a70-3e01-a01c-4ed2fe3a4cbe",
+      "name" : "AWS Credentials Provider",
+      "properties" : {
+        "Access Key" : "#{AWS Access Key ID}",
+        "default-credentials" : "false",
+        "Session Time" : "3600",
+        "assume-role-sts-signer-override" : "Default Signature",
+        "assume-role-sts-region" : "us-west-2",
+        "Secret Key" : "#{AWS Secret Access Key}",
+        "anonymous-credentials" : "false"
+      },
+      "propertyDescriptors" : {
+        "profile-name" : {
+          "displayName" : "Profile Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "profile-name",
+          "sensitive" : false
+        },
+        "Access Key" : {
+          "displayName" : "Access Key ID",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Access Key",
+          "sensitive" : true
+        },
+        "assume-role-proxy-configuration-service" : {
+          "displayName" : "Assume Role Proxy Configuration Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "assume-role-proxy-configuration-service",
+          "sensitive" : false
+        },
+        "default-credentials" : {
+          "displayName" : "Use Default Credentials",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "default-credentials",
+          "sensitive" : false
+        },
+        "Session Time" : {
+          "displayName" : "Assume Role Session Time",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Session Time",
+          "sensitive" : false
+        },
+        "assume-role-ssl-context-service" : {
+          "displayName" : "Assume Role SSL Context Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "assume-role-ssl-context-service",
+          "sensitive" : false
+        },
+        "assume-role-sts-signer-override" : {
+          "displayName" : "Assume Role STS Signer Override",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "assume-role-sts-signer-override",
+          "sensitive" : false
+        },
+        "custom-signer-class-name" : {
+          "displayName" : "Custom Signer Class Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "custom-signer-class-name",
+          "sensitive" : false
+        },
+        "Assume Role ARN" : {
+          "displayName" : "Assume Role ARN",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Assume Role ARN",
+          "sensitive" : false
+        },
+        "custom-signer-module-location" : {
+          "displayName" : "Custom Signer Module Location",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "custom-signer-module-location",
+          "resourceDefinition" : {
+            "cardinality" : "MULTIPLE",
+            "resourceTypes" : [ "DIRECTORY", "FILE" ]
+          },
+          "sensitive" : false
+        },
+        "Assume Role Session Name" : {
+          "displayName" : "Assume Role Session Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Assume Role Session Name",
+          "sensitive" : false
+        },
+        "assume-role-sts-endpoint" : {
+          "displayName" : "Assume Role STS Endpoint Override",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "assume-role-sts-endpoint",
+          "sensitive" : false
+        },
+        "assume-role-sts-region" : {
+          "displayName" : "Assume Role STS Region",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "assume-role-sts-region",
+          "sensitive" : false
+        },
+        "Secret Key" : {
+          "displayName" : "Secret Access Key",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Secret Key",
+          "sensitive" : true
+        },
+        "Credentials File" : {
+          "displayName" : "Credentials File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Credentials File",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "FILE" ]
+          },
+          "sensitive" : false
+        },
+        "assume-role-external-id" : {
+          "displayName" : "Assume Role External ID",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "assume-role-external-id",
+          "sensitive" : false
+        },
+        "anonymous-credentials" : {
+          "displayName" : "Use Anonymous Credentials",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "anonymous-credentials",
+          "sensitive" : false
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderControllerService"
+    }, {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-poi-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "Excel reader using protection settings specified by the user.",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-standard-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.9.20"
+        },
+        "type" : "org.apache.nifi.serialization.RecordReaderFactory"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "8e5c7b67-4d88-3818-a022-30074ddbf288",
+      "name" : "Configurable Excel Reader",
+      "properties" : {
+        "Required Sheets" : "${range.sheetname}",
+        "Input File Type" : "XLSX",
+        "Row Evaluation Strategy" : "STANDARD",
+        "schema-name" : "${schema.name}",
+        "Protection Type" : "#{Protection Type}",
+        "Starting Row" : "${range.rows.starting:isNull():ifElse('1', ${range.rows.starting})}",
+        "schema-access-strategy" : "Use Starting Row",
+        "schema-text" : "${avro.schema}",
+        "Password" : "#{File Password}"
+      },
+      "propertyDescriptors" : {
+        "schema-reference-reader" : {
+          "displayName" : "Schema Reference Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "schema-reference-reader",
+          "sensitive" : false
+        },
+        "schema-branch" : {
+          "displayName" : "Schema Branch",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-branch",
+          "sensitive" : false
+        },
+        "Required Sheets" : {
+          "displayName" : "Required Sheets",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Required Sheets",
+          "sensitive" : false
+        },
+        "Input File Type" : {
+          "displayName" : "Input File Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Input File Type",
+          "sensitive" : false
+        },
+        "Row Evaluation Strategy" : {
+          "displayName" : "Row Evaluation Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Row Evaluation Strategy",
+          "sensitive" : false
+        },
+        "Timestamp Format" : {
+          "displayName" : "Timestamp Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Timestamp Format",
+          "sensitive" : false
+        },
+        "Date Format" : {
+          "displayName" : "Date Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Date Format",
+          "sensitive" : false
+        },
+        "schema-name" : {
+          "displayName" : "Schema Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-name",
+          "sensitive" : false
+        },
+        "schema-registry" : {
+          "displayName" : "Schema Registry",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "schema-registry",
+          "sensitive" : false
+        },
+        "Protection Type" : {
+          "displayName" : "Protection Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Protection Type",
+          "sensitive" : false
+        },
+        "Starting Row" : {
+          "displayName" : "Starting Row",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Starting Row",
+          "sensitive" : false
+        },
+        "Time Format" : {
+          "displayName" : "Time Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Time Format",
+          "sensitive" : false
+        },
+        "schema-access-strategy" : {
+          "displayName" : "Schema Access Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-access-strategy",
+          "sensitive" : false
+        },
+        "schema-version" : {
+          "displayName" : "Schema Version",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-version",
+          "sensitive" : false
+        },
+        "schema-text" : {
+          "displayName" : "Schema Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-text",
+          "sensitive" : false
+        },
+        "Password" : {
+          "displayName" : "Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Password",
+          "sensitive" : true
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "org.apache.nifi.excel.ExcelReader"
+    }, {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-poi-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "Excel reader which always treats files as unprotected.",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-standard-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.9.20"
+        },
+        "type" : "org.apache.nifi.serialization.RecordReaderFactory"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "dfc06688-2cc3-3610-9f52-03a561dd35cc",
+      "name" : "Unprotected Excel Reader",
+      "properties" : {
+        "Required Sheets" : "${range.sheetname}",
+        "Input File Type" : "XLSX",
+        "Row Evaluation Strategy" : "STANDARD",
+        "schema-name" : "${schema.name}",
+        "Protection Type" : "UNPROTECTED",
+        "Starting Row" : "${range.rows.starting:isNull():ifElse('1', ${range.rows.starting})}",
+        "schema-access-strategy" : "Use Starting Row",
+        "schema-text" : "${avro.schema}"
+      },
+      "propertyDescriptors" : {
+        "schema-reference-reader" : {
+          "displayName" : "Schema Reference Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "schema-reference-reader",
+          "sensitive" : false
+        },
+        "schema-branch" : {
+          "displayName" : "Schema Branch",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-branch",
+          "sensitive" : false
+        },
+        "Required Sheets" : {
+          "displayName" : "Required Sheets",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Required Sheets",
+          "sensitive" : false
+        },
+        "Input File Type" : {
+          "displayName" : "Input File Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Input File Type",
+          "sensitive" : false
+        },
+        "Row Evaluation Strategy" : {
+          "displayName" : "Row Evaluation Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Row Evaluation Strategy",
+          "sensitive" : false
+        },
+        "Timestamp Format" : {
+          "displayName" : "Timestamp Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Timestamp Format",
+          "sensitive" : false
+        },
+        "Date Format" : {
+          "displayName" : "Date Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Date Format",
+          "sensitive" : false
+        },
+        "schema-name" : {
+          "displayName" : "Schema Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-name",
+          "sensitive" : false
+        },
+        "schema-registry" : {
+          "displayName" : "Schema Registry",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "schema-registry",
+          "sensitive" : false
+        },
+        "Protection Type" : {
+          "displayName" : "Protection Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Protection Type",
+          "sensitive" : false
+        },
+        "Starting Row" : {
+          "displayName" : "Starting Row",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Starting Row",
+          "sensitive" : false
+        },
+        "Time Format" : {
+          "displayName" : "Time Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Time Format",
+          "sensitive" : false
+        },
+        "schema-access-strategy" : {
+          "displayName" : "Schema Access Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-access-strategy",
+          "sensitive" : false
+        },
+        "schema-version" : {
+          "displayName" : "Schema Version",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-version",
+          "sensitive" : false
+        },
+        "schema-text" : {
+          "displayName" : "Schema Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-text",
+          "sensitive" : false
+        },
+        "Password" : {
+          "displayName" : "Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Password",
+          "sensitive" : true
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "org.apache.nifi.excel.ExcelReader"
+    } ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : { },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ {
+      "componentType" : "LABEL",
+      "groupIdentifier" : "flow-contents-group",
+      "height" : 136.0,
+      "identifier" : "438da1ba-0196-1000-0dac-996c385c5eab",
+      "label" : "Connector - Excel file stored in AWS S3 to Snowflake\n\nThis connector extracts data from a specified Excel file stored in AWS S3 object and loads it into Snowflake.\n\nRequirements:\n- the connector uses an Access Key to authenticate with AWS user\n- the connector performs a full offload: on each scheduled ingestion, data from the destination table is deleted and then re-ingested.",
+      "position" : {
+        "x" : -264.0,
+        "y" : -872.0
+      },
+      "style" : {
+        "font-size" : "12px"
+      },
+      "width" : 488.0,
+      "zIndex" : 0
+    } ],
+    "maxConcurrentTasks" : 1,
+    "name" : "Microsoft_Excel_(S3_to_Snowflake)",
+    "outputPorts" : [ ],
+    "parameterContextName" : "Microsoft Excel (S3 to Snowflake) Ingestion Parameters",
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ {
+      "comments" : "Parse Excel file and write its contents as JSON into the flow file.",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "Check provided ranges. If list of ranges to extract is empty, extract each sheet to a separate table. Otherwise extract each range to separate table.",
+          "groupId" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+          "id" : "33f16f15-c332-366a-b579-02a84cd69a4e",
+          "name" : "Route On Ranges Configuration",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "2efd4a1b-eff5-3453-a0f2-9559617b0e77",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "Annotate the Excel file with ranges that should be extracted from a file.",
+          "groupId" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+          "id" : "efecd68b-69de-3b42-8eec-f1b4f1d029d4",
+          "name" : "Set Ranges To Read On File",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 24
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : -352.0,
+          "y" : 112.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "id" : "2333e27b-6cdd-3892-a73c-bfe3c2045845",
+          "name" : "Excel File",
+          "type" : "INPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "373024f7-3bb7-3ffb-9829-3d9315d83e6f",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "all sheets" ],
+        "source" : {
+          "comments" : "Check provided ranges. If list of ranges to extract is empty, extract each sheet to a separate table. Otherwise extract each range to separate table.",
+          "groupId" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+          "id" : "33f16f15-c332-366a-b579-02a84cd69a4e",
+          "name" : "Route On Ranges Configuration",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 41
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : 328.0,
+          "y" : 512.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+          "id" : "cdf70af1-091f-34cf-bc87-2635aceb7847",
+          "name" : "Parsed Excel Data",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "39b6df68-a671-386f-ae8c-c6b652d9031f",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "id" : "cac170a2-4be1-3bae-96f4-f02e5f9ff360",
+          "name" : "Parsed Excel Data",
+          "type" : "OUTPUT_PORT"
+        },
+        "zIndex" : 39
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "Annotate the Excel file with ranges that should be extracted from a file.",
+          "groupId" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+          "id" : "efecd68b-69de-3b42-8eec-f1b4f1d029d4",
+          "name" : "Set Ranges To Read On File",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "4e1b39dd-d0d8-3fa5-b21c-0ad4aae80a1d",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "groupId" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+          "id" : "c87aaf3c-f9fc-3312-a08f-fa05b11d5dd8",
+          "name" : "Excel File",
+          "type" : "INPUT_PORT"
+        },
+        "zIndex" : 23
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : 664.0,
+          "y" : 328.0
+        }, {
+          "x" : 664.0,
+          "y" : 616.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+          "id" : "d4569991-e1e4-3343-a212-5947fdde5db4",
+          "name" : "Failure",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "916d6d63-6794-3d17-bc57-36e5636fc2a7",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "id" : "c37a4be2-d102-3f6e-8fe8-228edeb5ab57",
+          "name" : "Failure",
+          "type" : "OUTPUT_PORT"
+        },
+        "zIndex" : 40
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : -688.0,
+          "y" : 328.0
+        }, {
+          "x" : -688.0,
+          "y" : 616.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+          "id" : "d4569991-e1e4-3343-a212-5947fdde5db4",
+          "name" : "Failure",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "a8a5a590-7341-36ad-8c6b-c8865ea2ca30",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "id" : "509afe72-96b7-34b8-ac8e-99fd065b6434",
+          "name" : "Failure",
+          "type" : "OUTPUT_PORT"
+        },
+        "zIndex" : 43
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : 328.0,
+          "y" : 112.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "id" : "6365f5fc-4846-3e69-9f79-f5a6066c01b6",
+          "name" : "Excel File",
+          "type" : "INPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "b94af2fa-32ca-34a5-b719-f9c6bb9998c4",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "selected ranges" ],
+        "source" : {
+          "comments" : "Check provided ranges. If list of ranges to extract is empty, extract each sheet to a separate table. Otherwise extract each range to separate table.",
+          "groupId" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+          "id" : "33f16f15-c332-366a-b579-02a84cd69a4e",
+          "name" : "Route On Ranges Configuration",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 38
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : -352.0,
+          "y" : 512.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+          "id" : "cdf70af1-091f-34cf-bc87-2635aceb7847",
+          "name" : "Parsed Excel Data",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "f6040a7d-cd2e-3c42-9582-d6138cfc54b7",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "id" : "3b5e5030-e362-35d1-b356-6c2975ab0258",
+          "name" : "Parsed Excel Data",
+          "type" : "OUTPUT_PORT"
+        },
+        "zIndex" : 42
+      } ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "1 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+      "inputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "componentType" : "INPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "c87aaf3c-f9fc-3312-a08f-fa05b11d5dd8",
+        "name" : "Excel File",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : -128.0,
+          "y" : -272.0
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "INPUT_PORT"
+      } ],
+      "labels" : [ ],
+      "maxConcurrentTasks" : 1,
+      "name" : "Parse Excel File",
+      "outputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "componentType" : "OUTPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "cdf70af1-091f-34cf-bc87-2635aceb7847",
+        "name" : "Parsed Excel Data",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : -128.0,
+          "y" : 488.0
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "OUTPUT_PORT"
+      }, {
+        "allowRemoteAccess" : false,
+        "componentType" : "OUTPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "d4569991-e1e4-3343-a212-5947fdde5db4",
+        "name" : "Failure",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : -128.0,
+          "y" : 592.0
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "OUTPUT_PORT"
+      } ],
+      "parameterContextName" : "Microsoft Excel (S3 to Snowflake) Ingestion Parameters",
+      "position" : {
+        "x" : -200.0,
+        "y" : 24.0
+      },
+      "processGroups" : [ {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "Extract list of columns from the file schema that will be later needed for extracting requested columns.\nUses \"Configurable Excel Reader\".",
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "16ad69c7-0197-1000-90e1-8dca9fe52a52",
+            "name" : "Extract Column List",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "16ad69ca-0197-1000-df6e-3583bd61c80f",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "Set attributes on a file that will be used in subsequent processors.",
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "16ad69c8-0197-1000-5398-15fb38128a25",
+            "name" : "Set Attributes For Reading Configuration",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 30
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "Extract requested range from the Excel file (or the whole sheet if no range was provided) and save it in JSON format.\nUses \"Configurable Excel Reader\".",
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "16ad69c9-0197-1000-7e9f-fb727c5e2176",
+            "name" : "Parse Excel File",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "16ad69cb-0197-1000-eda0-21be4a4df9e8",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "Extract list of columns from the file schema that will be later needed for extracting requested columns.\nUses \"Configurable Excel Reader\".",
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "16ad69c7-0197-1000-90e1-8dca9fe52a52",
+            "name" : "Extract Column List",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 29
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "Set attributes on a file that will be used in subsequent processors.",
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "16ad69c8-0197-1000-5398-15fb38128a25",
+            "name" : "Set Attributes For Reading Configuration",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "16ad69cc-0197-1000-cd3d-0c82faccd701",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "For each provided range, generate a separate Excel file to be parsed and annotate this Excel file with parsed range (e.g. starting and ending row, column, etc.)",
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "16ad69c6-0197-1000-c42e-a7d6838d13b7",
+            "name" : "Parse Excel Cell Ranges",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 32
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "For each provided range, generate a separate Excel file to be parsed and annotate this Excel file with parsed range (e.g. starting and ending row, column, etc.)",
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "16ad69c6-0197-1000-c42e-a7d6838d13b7",
+            "name" : "Parse Excel Cell Ranges",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "73e7114f-f927-3ca7-b8bf-99b837508579",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "6365f5fc-4846-3e69-9f79-f5a6066c01b6",
+            "name" : "Excel File",
+            "type" : "INPUT_PORT"
+          },
+          "zIndex" : 33
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 336.0,
+            "y" : -336.0
+          }, {
+            "x" : 640.0,
+            "y" : -336.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "c37a4be2-d102-3f6e-8fe8-228edeb5ab57",
+            "name" : "Failure",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "a1ca0475-62c6-3ca2-ad2e-dcf771ec0097",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "For each provided range, generate a separate Excel file to be parsed and annotate this Excel file with parsed range (e.g. starting and ending row, column, etc.)",
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "16ad69c6-0197-1000-c42e-a7d6838d13b7",
+            "name" : "Parse Excel Cell Ranges",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 35
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 336.0,
+            "y" : 120.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "c37a4be2-d102-3f6e-8fe8-228edeb5ab57",
+            "name" : "Failure",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "b095a2d6-8de0-375f-a9e5-cc892fd5c729",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "Extract list of columns from the file schema that will be later needed for extracting requested columns.\nUses \"Configurable Excel Reader\".",
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "16ad69c7-0197-1000-90e1-8dca9fe52a52",
+            "name" : "Extract Column List",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 36
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "cac170a2-4be1-3bae-96f4-f02e5f9ff360",
+            "name" : "Parsed Excel Data",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "d505a8b3-c625-3254-b90b-0778fab8dd8c",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "result" ],
+          "source" : {
+            "comments" : "Extract requested range from the Excel file (or the whole sheet if no range was provided) and save it in JSON format.\nUses \"Configurable Excel Reader\".",
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "16ad69c9-0197-1000-7e9f-fb727c5e2176",
+            "name" : "Parse Excel File",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 34
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 336.0,
+            "y" : 336.0
+          }, {
+            "x" : 640.0,
+            "y" : 336.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "c37a4be2-d102-3f6e-8fe8-228edeb5ab57",
+            "name" : "Failure",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "eef78132-8752-3fd0-85c3-9618a9d402af",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "Extract requested range from the Excel file (or the whole sheet if no range was provided) and save it in JSON format.\nUses \"Configurable Excel Reader\".",
+            "groupId" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+            "id" : "16ad69c9-0197-1000-7e9f-fb727c5e2176",
+            "name" : "Parse Excel File",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 37
+        } ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "executionEngine" : "INHERITED",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+        "inputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "INPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "6365f5fc-4846-3e69-9f79-f5a6066c01b6",
+          "name" : "Excel File",
+          "portFunction" : "STANDARD",
+          "position" : {
+            "x" : -120.0,
+            "y" : -528.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "INPUT_PORT"
+        } ],
+        "labels" : [ ],
+        "maxConcurrentTasks" : 1,
+        "name" : "Parse With Ranges",
+        "outputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "c37a4be2-d102-3f6e-8fe8-228edeb5ab57",
+          "name" : "Failure",
+          "portFunction" : "STANDARD",
+          "position" : {
+            "x" : 520.0,
+            "y" : 96.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        }, {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "cac170a2-4be1-3bae-96f4-f02e5f9ff360",
+          "name" : "Parsed Excel Data",
+          "portFunction" : "STANDARD",
+          "position" : {
+            "x" : -120.0,
+            "y" : 488.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        } ],
+        "parameterContextName" : "Microsoft Excel (S3 to Snowflake) Ingestion Parameters",
+        "position" : {
+          "x" : 136.0,
+          "y" : 240.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "runtime-office-nar",
+            "group" : "com.snowflake.openflow.runtime",
+            "version" : "2025.9.4.20"
+          },
+          "comments" : "For each provided range, generate a separate Excel file to be parsed and annotate this Excel file with parsed range (e.g. starting and ending row, column, etc.)",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "16ad69c6-0197-1000-c42e-a7d6838d13b7",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Parse Excel Cell Ranges",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -175.99999912521264,
+            "y" : -404.0000061360879
+          },
+          "properties" : {
+            "Ranges" : "${ranges}"
+          },
+          "propertyDescriptors" : {
+            "Ranges" : {
+              "displayName" : "Ranges",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Ranges",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "com.snowflake.openflow.runtime.processors.office.ParseExcelCellReference",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "runtime-record-schema-nar",
+            "group" : "com.snowflake.openflow.runtime",
+            "version" : "2025.9.4.20"
+          },
+          "comments" : "Extract list of columns from the file schema that will be later needed for extracting requested columns.\nUses \"Configurable Excel Reader\".",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "16ad69c7-0197-1000-90e1-8dca9fe52a52",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Extract Column List",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -176.0,
+            "y" : 56.0
+          },
+          "properties" : {
+            "Record Reader" : "8e5c7b67-4d88-3818-a022-30074ddbf288",
+            "End Column Index" : "${range.columns.ending}",
+            "Start Column Index" : "${range.columns.starting}"
+          },
+          "propertyDescriptors" : {
+            "Record Reader" : {
+              "displayName" : "Record Reader",
+              "dynamic" : false,
+              "identifiesControllerService" : true,
+              "name" : "Record Reader",
+              "sensitive" : false
+            },
+            "End Column Index" : {
+              "displayName" : "End Column Index",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "End Column Index",
+              "sensitive" : false
+            },
+            "Start Column Index" : {
+              "displayName" : "Start Column Index",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Start Column Index",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "com.snowflake.openflow.runtime.processors.record.schema.ExtractSchemaColumns",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2025.9.4.20"
+          },
+          "comments" : "Set attributes on a file that will be used in subsequent processors.",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "16ad69c8-0197-1000-5398-15fb38128a25",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Set Attributes For Reading Configuration",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -175.99999912521264,
+            "y" : -188.0000061360879
+          },
+          "properties" : {
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100",
+            "range.sheetname" : "${sheetname:isEmpty():ifElse(${range.sheetname}, ${sheetname})}",
+            "rows.limit" : "${range.rows.ending:isNull():ifElse(\n  ${range.rows.ending},\n  ${range.rows.ending:minus(${range.rows.starting})}\n)}"
+          },
+          "propertyDescriptors" : {
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "range.sheetname" : {
+              "displayName" : "range.sheetname",
+              "dynamic" : true,
+              "identifiesControllerService" : false,
+              "name" : "range.sheetname",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            },
+            "rows.limit" : {
+              "displayName" : "rows.limit",
+              "dynamic" : true,
+              "identifiesControllerService" : false,
+              "name" : "rows.limit",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 25,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "original" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2025.9.4.20"
+          },
+          "comments" : "Extract requested range from the Excel file (or the whole sheet if no range was provided) and save it in JSON format.\nUses \"Configurable Excel Reader\".",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "d7bea172-bf92-32f4-8796-aa7cbf27181f",
+          "identifier" : "16ad69c9-0197-1000-7e9f-fb727c5e2176",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Parse Excel File",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -175.99999912521264,
+            "y" : 275.9999938639121
+          },
+          "properties" : {
+            "result" : "select ${schema.columns}\nfrom FLOWFILE\n${rows.limit:isEmpty():ifElse('', 'LIMIT ')}\n${rows.limit}",
+            "dbf-default-precision" : "10",
+            "record-writer" : "220ab423-abac-3fd1-b897-c00f95f97df8",
+            "record-reader" : "8e5c7b67-4d88-3818-a022-30074ddbf288",
+            "include-zero-record-flowfiles" : "true",
+            "dbf-default-scale" : "0"
+          },
+          "propertyDescriptors" : {
+            "result" : {
+              "displayName" : "result",
+              "dynamic" : true,
+              "identifiesControllerService" : false,
+              "name" : "result",
+              "sensitive" : false
+            },
+            "dbf-default-precision" : {
+              "displayName" : "Default Decimal Precision",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "dbf-default-precision",
+              "sensitive" : false
+            },
+            "record-writer" : {
+              "displayName" : "Record Writer",
+              "dynamic" : false,
+              "identifiesControllerService" : true,
+              "name" : "record-writer",
+              "sensitive" : false
+            },
+            "record-reader" : {
+              "displayName" : "Record Reader",
+              "dynamic" : false,
+              "identifiesControllerService" : true,
+              "name" : "record-reader",
+              "sensitive" : false
+            },
+            "include-zero-record-flowfiles" : {
+              "displayName" : "Include Zero Record FlowFiles",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "include-zero-record-flowfiles",
+              "sensitive" : false
+            },
+            "dbf-default-scale" : {
+              "displayName" : "Default Decimal Scale",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "dbf-default-scale",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.QueryRecord",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "scheduledState" : "ENABLED",
+        "statelessFlowTimeout" : "1 min"
+      }, {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "Extract list of columns from the file schema that will be later needed for extracting requested columns.\nUses \"Unprotected Excel Reader\".",
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "16b22ad0-0197-1000-03ef-32b393164d0c",
+            "name" : "Extract Column List",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "16b22ad4-0197-1000-e044-b9a48e5f5272",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "Set attributes on a file that will be used in subsequent processors.",
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "16b22ad2-0197-1000-5154-224d6d602653",
+            "name" : "Set Attributes For Reading Configuration",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 30
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "Extract requested range from the Excel file (or the whole sheet if no range was provided) and save it in JSON format.\nUses \"Unprotected Excel Reader\".",
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "16b22ad1-0197-1000-fa68-262148ff1915",
+            "name" : "Parse Excel File",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "16b22ad5-0197-1000-c28f-6029aef519b2",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "Extract list of columns from the file schema that will be later needed for extracting requested columns.\nUses \"Unprotected Excel Reader\".",
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "16b22ad0-0197-1000-03ef-32b393164d0c",
+            "name" : "Extract Column List",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 29
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "Set attributes on a file that will be used in subsequent processors.",
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "16b22ad2-0197-1000-5154-224d6d602653",
+            "name" : "Set Attributes For Reading Configuration",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "16b22ad6-0197-1000-aec5-b16c8e168de4",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "split" ],
+          "source" : {
+            "comments" : "Split the Excel file to separate sheets if ranges weren't provided.",
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "16b22acf-0197-1000-3079-58424523b815",
+            "name" : "Split Workbook To Separate Sheets",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 33
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "Split the Excel file to separate sheets if ranges weren't provided.",
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "16b22acf-0197-1000-3079-58424523b815",
+            "name" : "Split Workbook To Separate Sheets",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "4ab95ff5-25ff-3f5e-9fcd-91204b40156c",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "2333e27b-6cdd-3892-a73c-bfe3c2045845",
+            "name" : "Excel File",
+            "type" : "INPUT_PORT"
+          },
+          "zIndex" : 34
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 544.0,
+            "y" : -344.0
+          }, {
+            "x" : 808.0,
+            "y" : -344.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "509afe72-96b7-34b8-ac8e-99fd065b6434",
+            "name" : "Failure",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "61f39425-0298-3e21-9846-487502caa5fa",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "Split the Excel file to separate sheets if ranges weren't provided.",
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "16b22acf-0197-1000-3079-58424523b815",
+            "name" : "Split Workbook To Separate Sheets",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 36
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "3b5e5030-e362-35d1-b356-6c2975ab0258",
+            "name" : "Parsed Excel Data",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "7c300ef9-2be7-37ed-8f7e-54c8fb6b0188",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "result" ],
+          "source" : {
+            "comments" : "Extract requested range from the Excel file (or the whole sheet if no range was provided) and save it in JSON format.\nUses \"Unprotected Excel Reader\".",
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "16b22ad1-0197-1000-fa68-262148ff1915",
+            "name" : "Parse Excel File",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 35
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 544.0,
+            "y" : 120.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "509afe72-96b7-34b8-ac8e-99fd065b6434",
+            "name" : "Failure",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "7e706ba0-8acc-304a-bb04-b2769c56759f",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "Extract list of columns from the file schema that will be later needed for extracting requested columns.\nUses \"Unprotected Excel Reader\".",
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "16b22ad0-0197-1000-03ef-32b393164d0c",
+            "name" : "Extract Column List",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 37
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 544.0,
+            "y" : 344.0
+          }, {
+            "x" : 808.0,
+            "y" : 344.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "509afe72-96b7-34b8-ac8e-99fd065b6434",
+            "name" : "Failure",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "85b41818-851b-3cf1-98f9-ed7427199a06",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "Extract requested range from the Excel file (or the whole sheet if no range was provided) and save it in JSON format.\nUses \"Unprotected Excel Reader\".",
+            "groupId" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+            "id" : "16b22ad1-0197-1000-fa68-262148ff1915",
+            "name" : "Parse Excel File",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 38
+        } ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "executionEngine" : "INHERITED",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+        "inputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "INPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "2333e27b-6cdd-3892-a73c-bfe3c2045845",
+          "name" : "Excel File",
+          "portFunction" : "STANDARD",
+          "position" : {
+            "x" : 104.0,
+            "y" : -520.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "INPUT_PORT"
+        } ],
+        "labels" : [ ],
+        "maxConcurrentTasks" : 1,
+        "name" : "Parse All Sheets",
+        "outputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "3b5e5030-e362-35d1-b356-6c2975ab0258",
+          "name" : "Parsed Excel Data",
+          "portFunction" : "STANDARD",
+          "position" : {
+            "x" : 96.0,
+            "y" : 496.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        }, {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "509afe72-96b7-34b8-ac8e-99fd065b6434",
+          "name" : "Failure",
+          "portFunction" : "STANDARD",
+          "position" : {
+            "x" : 688.0,
+            "y" : 96.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        } ],
+        "parameterContextName" : "Microsoft Excel (S3 to Snowflake) Ingestion Parameters",
+        "position" : {
+          "x" : -544.0,
+          "y" : 240.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ "original" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-poi-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2025.9.4.20"
+          },
+          "comments" : "Split the Excel file to separate sheets if ranges weren't provided.",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "16b22acf-0197-1000-3079-58424523b815",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Split Workbook To Separate Sheets",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 43.99989713734112,
+            "y" : -404.0000061360877
+          },
+          "properties" : {
+            "Protection Type" : "#{Protection Type}",
+            "Password" : "#{File Password}"
+          },
+          "propertyDescriptors" : {
+            "Protection Type" : {
+              "displayName" : "Protection Type",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Protection Type",
+              "sensitive" : false
+            },
+            "Password" : {
+              "displayName" : "Password",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Password",
+              "sensitive" : true
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.excel.SplitExcel",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "runtime-record-schema-nar",
+            "group" : "com.snowflake.openflow.runtime",
+            "version" : "2025.9.4.20"
+          },
+          "comments" : "Extract list of columns from the file schema that will be later needed for extracting requested columns.\nUses \"Unprotected Excel Reader\".",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "16b22ad0-0197-1000-03ef-32b393164d0c",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Extract Column List",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 43.99989713734112,
+            "y" : 51.99999386391232
+          },
+          "properties" : {
+            "Record Reader" : "dfc06688-2cc3-3610-9f52-03a561dd35cc",
+            "End Column Index" : "${range.columns.ending}",
+            "Start Column Index" : "${range.columns.starting}"
+          },
+          "propertyDescriptors" : {
+            "Record Reader" : {
+              "displayName" : "Record Reader",
+              "dynamic" : false,
+              "identifiesControllerService" : true,
+              "name" : "Record Reader",
+              "sensitive" : false
+            },
+            "End Column Index" : {
+              "displayName" : "End Column Index",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "End Column Index",
+              "sensitive" : false
+            },
+            "Start Column Index" : {
+              "displayName" : "Start Column Index",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Start Column Index",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "com.snowflake.openflow.runtime.processors.record.schema.ExtractSchemaColumns",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "original" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2025.9.4.20"
+          },
+          "comments" : "Extract requested range from the Excel file (or the whole sheet if no range was provided) and save it in JSON format.\nUses \"Unprotected Excel Reader\".",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "16b22ad1-0197-1000-fa68-262148ff1915",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Parse Excel File",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 43.99989713734112,
+            "y" : 275.9999938639123
+          },
+          "properties" : {
+            "result" : "select ${schema.columns}\nfrom FLOWFILE\n${rows.limit:isEmpty():ifElse('', 'LIMIT ')}\n${rows.limit}",
+            "dbf-default-precision" : "10",
+            "record-writer" : "220ab423-abac-3fd1-b897-c00f95f97df8",
+            "record-reader" : "dfc06688-2cc3-3610-9f52-03a561dd35cc",
+            "include-zero-record-flowfiles" : "true",
+            "dbf-default-scale" : "0"
+          },
+          "propertyDescriptors" : {
+            "result" : {
+              "displayName" : "result",
+              "dynamic" : true,
+              "identifiesControllerService" : false,
+              "name" : "result",
+              "sensitive" : false
+            },
+            "dbf-default-precision" : {
+              "displayName" : "Default Decimal Precision",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "dbf-default-precision",
+              "sensitive" : false
+            },
+            "record-writer" : {
+              "displayName" : "Record Writer",
+              "dynamic" : false,
+              "identifiesControllerService" : true,
+              "name" : "record-writer",
+              "sensitive" : false
+            },
+            "record-reader" : {
+              "displayName" : "Record Reader",
+              "dynamic" : false,
+              "identifiesControllerService" : true,
+              "name" : "record-reader",
+              "sensitive" : false
+            },
+            "include-zero-record-flowfiles" : {
+              "displayName" : "Include Zero Record FlowFiles",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "include-zero-record-flowfiles",
+              "sensitive" : false
+            },
+            "dbf-default-scale" : {
+              "displayName" : "Default Decimal Scale",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "dbf-default-scale",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.QueryRecord",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2025.9.4.20"
+          },
+          "comments" : "Set attributes on a file that will be used in subsequent processors.",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "fdcabbaf-c333-3c8b-a7cb-345cacd3762e",
+          "identifier" : "16b22ad2-0197-1000-5154-224d6d602653",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Set Attributes For Reading Configuration",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 43.99989713734112,
+            "y" : -188.00000613608768
+          },
+          "properties" : {
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100",
+            "range.sheetname" : "${sheetname:isEmpty():ifElse(${range.sheetname}, ${sheetname})}",
+            "rows.limit" : "${range.rows.ending:isNull():ifElse(\n  ${range.rows.ending},\n  ${range.rows.ending:minus(${range.rows.starting})}\n)}"
+          },
+          "propertyDescriptors" : {
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "range.sheetname" : {
+              "displayName" : "range.sheetname",
+              "dynamic" : true,
+              "identifiesControllerService" : false,
+              "name" : "range.sheetname",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            },
+            "rows.limit" : {
+              "displayName" : "rows.limit",
+              "dynamic" : true,
+              "identifiesControllerService" : false,
+              "name" : "rows.limit",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 25,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "scheduledState" : "ENABLED",
+        "statelessFlowTimeout" : "1 min"
+      } ],
+      "processors" : [ {
+        "autoTerminatedRelationships" : [ "unmatched" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.4.20"
+        },
+        "comments" : "Check provided ranges. If list of ranges to extract is empty, extract each sheet to a separate table. Otherwise extract each range to separate table.",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "33f16f15-c332-366a-b579-02a84cd69a4e",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "Route On Ranges Configuration",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -184.0,
+          "y" : 48.0
+        },
+        "properties" : {
+          "Routing Strategy" : "Route to Property name",
+          "all sheets" : "${ranges:isEmpty()}",
+          "selected ranges" : "${ranges:isEmpty():not()}"
+        },
+        "propertyDescriptors" : {
+          "Routing Strategy" : {
+            "displayName" : "Routing Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Routing Strategy",
+            "sensitive" : false
+          },
+          "all sheets" : {
+            "displayName" : "all sheets",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "all sheets",
+            "sensitive" : false
+          },
+          "selected ranges" : {
+            "displayName" : "selected ranges",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "selected ranges",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.4.20"
+        },
+        "comments" : "Annotate the Excel file with ranges that should be extracted from a file.",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "286de69a-3a09-3bbe-816a-179d5a6f845b",
+        "identifier" : "efecd68b-69de-3b42-8eec-f1b4f1d029d4",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "Set Ranges To Read On File",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -184.0,
+          "y" : -160.0
+        },
+        "properties" : {
+          "ranges" : "${#{Ranges}:isEmpty():ifElse('', #{Ranges})}",
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "ranges" : {
+            "displayName" : "ranges",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "ranges",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      } ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min"
+    }, {
+      "comments" : "Generate a separate flow files for each input file. Each flow file has attribute with name of single input file.",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+          "id" : "e7e58367-eb56-30bb-8621-0ab55f4ca48c",
+          "name" : "Output File",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+        "identifier" : "3c8a4bda-63f2-366f-9ab9-a23cadd9ef8b",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "Assign a single input file to each flow file duplicate.",
+          "groupId" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+          "id" : "4877dc63-0196-1000-ae88-2fc7650f9da5",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 6
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "Add attribute with list of input files to initial flow file that triggered ingestion.",
+          "groupId" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+          "id" : "4877dc60-0196-1000-77f3-86f7072395d6",
+          "name" : "Add Attribute With Input Files",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+        "identifier" : "3cec0c23-6f2d-3eb0-9dee-48f172d2e812",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "groupId" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+          "id" : "de9011f9-a14e-32e2-ba08-a0e34f3517bd",
+          "name" : "Input File",
+          "type" : "INPUT_PORT"
+        },
+        "zIndex" : 7
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "Duplicate initial flow file to number of input files.",
+          "groupId" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+          "id" : "4877dc62-0196-1000-8733-76523b8c79a5",
+          "name" : "Duplicate Flow File",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+        "identifier" : "4877dc65-0196-1000-e4d1-db928989d354",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "Add attribute with list of input files to initial flow file that triggered ingestion.",
+          "groupId" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+          "id" : "4877dc60-0196-1000-77f3-86f7072395d6",
+          "name" : "Add Attribute With Input Files",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 4
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "Assign a single input file to each flow file duplicate.",
+          "groupId" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+          "id" : "4877dc63-0196-1000-ae88-2fc7650f9da5",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+        "identifier" : "4877dc66-0196-1000-566a-e73b6199f4e3",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "Duplicate initial flow file to number of input files.",
+          "groupId" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+          "id" : "4877dc62-0196-1000-8733-76523b8c79a5",
+          "name" : "Duplicate Flow File",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 5
+      } ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "1 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+      "inputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "componentType" : "INPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+        "identifier" : "de9011f9-a14e-32e2-ba08-a0e34f3517bd",
+        "name" : "Input File",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : 496.0,
+          "y" : -456.0
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "INPUT_PORT"
+      } ],
+      "labels" : [ ],
+      "maxConcurrentTasks" : 1,
+      "name" : "Split Input Files",
+      "outputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "componentType" : "OUTPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+        "identifier" : "e7e58367-eb56-30bb-8621-0ab55f4ca48c",
+        "name" : "Output File",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : 496.0,
+          "y" : 320.0
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "OUTPUT_PORT"
+      } ],
+      "parameterContextName" : "Microsoft Excel (S3 to Snowflake) Ingestion Parameters",
+      "position" : {
+        "x" : -200.0,
+        "y" : -496.0
+      },
+      "processGroups" : [ ],
+      "processors" : [ {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.4.20"
+        },
+        "comments" : "Add attribute with list of input files to initial flow file that triggered ingestion.",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+        "identifier" : "4877dc60-0196-1000-77f3-86f7072395d6",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "Add Attribute With Input Files",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 440.0,
+          "y" : -336.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100",
+          "files" : "#{S3 Object Keys}"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "files" : {
+            "displayName" : "files",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "files",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.4.20"
+        },
+        "comments" : "Duplicate initial flow file to number of input files.",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+        "identifier" : "4877dc62-0196-1000-8733-76523b8c79a5",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "Duplicate Flow File",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 440.0,
+          "y" : -120.0
+        },
+        "properties" : {
+          "Number of Copies" : "${literal(${allDelineatedValues(\"${files}\", \",\"):count()}):minus(1)}"
+        },
+        "propertyDescriptors" : {
+          "Number of Copies" : {
+            "displayName" : "Number of Copies",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Number of Copies",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.DuplicateFlowFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.4.20"
+        },
+        "comments" : "Assign a single input file to each flow file duplicate.",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "4877dc5e-0196-1000-3624-0d1e16b0b7e4",
+        "identifier" : "4877dc63-0196-1000-ae88-2fc7650f9da5",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 440.0,
+          "y" : 104.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100",
+          "object.key" : "${files:getDelimitedField(${copy.index:plus(1)}):trim()}"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "object.key" : {
+            "displayName" : "object.key",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "object.key",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      } ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min"
+    }, {
+      "comments" : "Put parsed Excel file to Snowflake.",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : 304.0,
+          "y" : 1576.0
+        }, {
+          "x" : 576.0,
+          "y" : 1576.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "64279d5e-68ce-3c1f-8859-a1eaf8bcda98",
+          "name" : "Failure",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "03fc727f-8fc3-3968-8f0b-e63fb29c55de",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure" ],
+        "source" : {
+          "comments" : "Insert read Excel records to destination table.",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "175a3d50-0197-1000-e76a-847551ef372d",
+          "name" : "Insert Data To Table",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 59
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "Set attribute with name of the destination table that will be used by subsequent processors.",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "f2c30aed-1f8c-39ef-822b-52b1e0f7cbd4",
+          "name" : "Set Destination Table Name Attribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "51b78f74-ac0e-3596-9e2c-23171dbefdb4",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "7c2d0f1b-0184-312d-8d80-c711e1469dc7",
+          "name" : "Excel Data",
+          "type" : "INPUT_PORT"
+        },
+        "zIndex" : 33
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : -480.0,
+          "y" : 1152.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "91e9acca-cd04-3847-85f4-d1b64a2d1c63",
+          "name" : "Create Or Replace Destination Table",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "5a00e51d-a721-32f1-a886-08adee115625",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "illegal alteration", "object not found" ],
+        "source" : {
+          "comments" : "Alter destination table schema, so that it is up to date with the sheet schema.\nIf the table does not exists, or alteration was not valid - route to create or replace the table.",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "ee4cabc9-4630-3457-9394-f897e8d143cd",
+          "name" : "Update Destination Table Schema",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 56
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "Insert read Excel records to destination table.",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "175a3d50-0197-1000-e76a-847551ef372d",
+          "name" : "Insert Data To Table",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "69cb33c7-0cae-371f-8fdd-f4f6c9e5fa2a",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "Truncate destination table before loading new data.",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "175a5b7c-0197-1000-b577-849f02ca4beb",
+          "name" : "Truncate Destination Table",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 55
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "Truncate destination table before loading new data.",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "175a5b7c-0197-1000-b577-849f02ca4beb",
+          "name" : "Truncate Destination Table",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "6d1bf8ab-3660-3f0b-9aca-26ad26bdcdbe",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "Alter destination table schema, so that it is up to date with the sheet schema.\nIf the table does not exists, or alteration was not valid - route to create or replace the table.",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "ee4cabc9-4630-3457-9394-f897e8d143cd",
+          "name" : "Update Destination Table Schema",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 54
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "Alter destination table schema, so that it is up to date with the sheet schema.\nIf the table does not exists, or alteration was not valid - route to create or replace the table.",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "ee4cabc9-4630-3457-9394-f897e8d143cd",
+          "name" : "Update Destination Table Schema",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "6d21211d-5e77-398f-a1f5-3f9a2db27202",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "Set attribute with name of the destination table that will be used by subsequent processors.",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "f2c30aed-1f8c-39ef-822b-52b1e0f7cbd4",
+          "name" : "Set Destination Table Name Attribute",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 53
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : -808.0,
+          "y" : 1368.0
+        }, {
+          "x" : -808.0,
+          "y" : 1664.0
+        }, {
+          "x" : 576.0,
+          "y" : 1656.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "64279d5e-68ce-3c1f-8859-a1eaf8bcda98",
+          "name" : "Failure",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "7990a166-b3c3-3322-9ad1-581d457bc04f",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "91e9acca-cd04-3847-85f4-d1b64a2d1c63",
+          "name" : "Create Or Replace Destination Table",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 61
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : -480.0,
+          "y" : 1576.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "Insert read Excel records to destination table.",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "175a3d50-0197-1000-e76a-847551ef372d",
+          "name" : "Insert Data To Table",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "a50855e6-4cee-3758-bb3c-6d4029dd496d",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "91e9acca-cd04-3847-85f4-d1b64a2d1c63",
+          "name" : "Create Or Replace Destination Table",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 57
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : 304.0,
+          "y" : 1152.0
+        }, {
+          "x" : 576.0,
+          "y" : 1152.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "64279d5e-68ce-3c1f-8859-a1eaf8bcda98",
+          "name" : "Failure",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "c895968b-b815-3c06-abf3-c825991fbafa",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure" ],
+        "source" : {
+          "comments" : "Alter destination table schema, so that it is up to date with the sheet schema.\nIf the table does not exists, or alteration was not valid - route to create or replace the table.",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "ee4cabc9-4630-3457-9394-f897e8d143cd",
+          "name" : "Update Destination Table Schema",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 60
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "64279d5e-68ce-3c1f-8859-a1eaf8bcda98",
+          "name" : "Failure",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "e40108a0-3281-364b-91bd-e30a2ad97ad3",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure" ],
+        "source" : {
+          "comments" : "Truncate destination table before loading new data.",
+          "groupId" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+          "id" : "175a5b7c-0197-1000-b577-849f02ca4beb",
+          "name" : "Truncate Destination Table",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 58
+      } ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "1 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+      "inputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "componentType" : "INPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "7c2d0f1b-0184-312d-8d80-c711e1469dc7",
+        "name" : "Excel Data",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : -144.0,
+          "y" : 752.0
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "INPUT_PORT"
+      } ],
+      "labels" : [ ],
+      "maxConcurrentTasks" : 1,
+      "name" : "Write Excel File",
+      "outputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "componentType" : "OUTPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "64279d5e-68ce-3c1f-8859-a1eaf8bcda98",
+        "name" : "Failure",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : 456.0,
+          "y" : 1344.0
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "OUTPUT_PORT"
+      } ],
+      "parameterContextName" : "Microsoft Excel (S3 to Snowflake) Ingestion Parameters",
+      "position" : {
+        "x" : -200.0,
+        "y" : 336.0
+      },
+      "processGroups" : [ ],
+      "processors" : [ {
+        "autoTerminatedRelationships" : [ "success" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "runtime-snowpipe-processors-nar",
+          "group" : "com.snowflake.openflow.runtime",
+          "version" : "2025.9.4.20"
+        },
+        "comments" : "Insert read Excel records to destination table.",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "175a3d50-0197-1000-e76a-847551ef372d",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "Insert Data To Table",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -200.0,
+          "y" : 1512.0
+        },
+        "properties" : {
+          "Account" : "#{Snowflake Account Identifier}",
+          "User" : "#{Snowflake User}",
+          "Table" : "\"${table.name}\"",
+          "Max Batch Size" : "10000",
+          "Schema" : "#{Destination Schema}",
+          "Max Tasks Per Group" : "1",
+          "Record Reader" : "81f35f8e-cc4a-36e0-ab25-7221a7ad53d1",
+          "Iceberg Enabled" : "false",
+          "Private Key Service" : "3551017f-aabe-33e3-a20d-c9ec6bb22f98",
+          "Connection Strategy" : "STANDARD",
+          "Role" : "#{Snowflake Role}",
+          "Snowpipe Channel Prefix" : "${hostname(false)}_${avro.schema:hash('SHA-256')}",
+          "Client Lag" : "1 sec",
+          "Authentication Strategy" : "KEY_PAIR",
+          "Delivery Guarantee" : "At least once",
+          "Database" : "#{Destination Database}"
+        },
+        "propertyDescriptors" : {
+          "Account" : {
+            "displayName" : "Account",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Account",
+            "sensitive" : false
+          },
+          "User" : {
+            "displayName" : "User",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "User",
+            "sensitive" : false
+          },
+          "Table" : {
+            "displayName" : "Table",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Table",
+            "sensitive" : false
+          },
+          "Concurrency Group" : {
+            "displayName" : "Concurrency Group",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Concurrency Group",
+            "sensitive" : false
+          },
+          "Max Batch Size" : {
+            "displayName" : "Max Batch Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Max Batch Size",
+            "sensitive" : false
+          },
+          "Schema" : {
+            "displayName" : "Schema",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Schema",
+            "sensitive" : false
+          },
+          "Max Tasks Per Group" : {
+            "displayName" : "Max Tasks Per Group",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Max Tasks Per Group",
+            "sensitive" : false
+          },
+          "Record Offset" : {
+            "displayName" : "Record Offset",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Record Offset",
+            "sensitive" : false
+          },
+          "Record Reader" : {
+            "displayName" : "Record Reader",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Record Reader",
+            "sensitive" : false
+          },
+          "Iceberg Enabled" : {
+            "displayName" : "Iceberg Enabled",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Iceberg Enabled",
+            "sensitive" : false
+          },
+          "Snowpipe Channel Index" : {
+            "displayName" : "Snowpipe Channel Index",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Snowpipe Channel Index",
+            "sensitive" : false
+          },
+          "Private Key Service" : {
+            "displayName" : "Private Key Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Private Key Service",
+            "sensitive" : false
+          },
+          "Connection Strategy" : {
+            "displayName" : "Connection Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Connection Strategy",
+            "sensitive" : false
+          },
+          "Role" : {
+            "displayName" : "Role",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Role",
+            "sensitive" : false
+          },
+          "Record Offset Strategy" : {
+            "displayName" : "Record Offset Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Record Offset Strategy",
+            "sensitive" : false
+          },
+          "Snowpipe Channel Prefix" : {
+            "displayName" : "Snowpipe Channel Prefix",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Snowpipe Channel Prefix",
+            "sensitive" : false
+          },
+          "Client Lag" : {
+            "displayName" : "Client Lag",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Client Lag",
+            "sensitive" : false
+          },
+          "Authentication Strategy" : {
+            "displayName" : "Authentication Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Authentication Strategy",
+            "sensitive" : false
+          },
+          "Delivery Guarantee" : {
+            "displayName" : "Delivery Guarantee",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delivery Guarantee",
+            "sensitive" : false
+          },
+          "Record Offset Record Path" : {
+            "displayName" : "Record Offset Record Path",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Record Offset Record Path",
+            "sensitive" : false
+          },
+          "Database" : {
+            "displayName" : "Database",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Database",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "com.snowflake.openflow.runtime.processors.snowpipe.PutSnowpipeStreaming",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.4.20"
+        },
+        "comments" : "Truncate destination table before loading new data.",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "175a5b7c-0197-1000-b577-849f02ca4beb",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "Truncate Destination Table",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -200.0,
+          "y" : 1304.0
+        },
+        "properties" : {
+          "esql-max-rows" : "0",
+          "dbf-default-precision" : "10",
+          "Max Wait Time" : "0 seconds",
+          "SQL Query" : "TRUNCATE TABLE \"${table.name}\"",
+          "Database Connection Pooling Service" : "1c249b1a-3267-3930-b7b9-fffa14a09538",
+          "esql-auto-commit" : "true",
+          "dbf-user-logical-types" : "false",
+          "dbf-default-scale" : "0",
+          "compression-format" : "NONE",
+          "esql-output-batch-size" : "0",
+          "esql-fetch-size" : "0",
+          "dbf-normalize" : "false",
+          "Content Output Strategy" : "ORIGINAL"
+        },
+        "propertyDescriptors" : {
+          "esql-max-rows" : {
+            "displayName" : "Max Rows Per Flow File",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "esql-max-rows",
+            "sensitive" : false
+          },
+          "dbf-default-precision" : {
+            "displayName" : "Default Decimal Precision",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "dbf-default-precision",
+            "sensitive" : false
+          },
+          "Max Wait Time" : {
+            "displayName" : "Max Wait Time",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Max Wait Time",
+            "sensitive" : false
+          },
+          "SQL Query" : {
+            "displayName" : "SQL Query",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "SQL Query",
+            "sensitive" : false
+          },
+          "Database Connection Pooling Service" : {
+            "displayName" : "Database Connection Pooling Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Database Connection Pooling Service",
+            "sensitive" : false
+          },
+          "sql-post-query" : {
+            "displayName" : "SQL Post-Query",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "sql-post-query",
+            "sensitive" : false
+          },
+          "esql-auto-commit" : {
+            "displayName" : "Set Auto Commit",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "esql-auto-commit",
+            "sensitive" : false
+          },
+          "dbf-user-logical-types" : {
+            "displayName" : "Use Avro Logical Types",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "dbf-user-logical-types",
+            "sensitive" : false
+          },
+          "dbf-default-scale" : {
+            "displayName" : "Default Decimal Scale",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "dbf-default-scale",
+            "sensitive" : false
+          },
+          "sql-pre-query" : {
+            "displayName" : "SQL Pre-Query",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "sql-pre-query",
+            "sensitive" : false
+          },
+          "compression-format" : {
+            "displayName" : "Compression Format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "compression-format",
+            "sensitive" : false
+          },
+          "esql-output-batch-size" : {
+            "displayName" : "Output Batch Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "esql-output-batch-size",
+            "sensitive" : false
+          },
+          "esql-fetch-size" : {
+            "displayName" : "Fetch Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "esql-fetch-size",
+            "sensitive" : false
+          },
+          "dbf-normalize" : {
+            "displayName" : "Normalize Table/Column Names",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "dbf-normalize",
+            "sensitive" : false
+          },
+          "Content Output Strategy" : {
+            "displayName" : "Content Output Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Content Output Strategy",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.ExecuteSQL",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "runtime-snowflake-processors-nar",
+          "group" : "com.snowflake.openflow.runtime",
+          "version" : "2025.9.4.20"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "91e9acca-cd04-3847-85f4-d1b64a2d1c63",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "Create Or Replace Destination Table",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -656.0,
+          "y" : 1304.0
+        },
+        "properties" : {
+          "Table Name" : "${table.name}",
+          "Table Metadata Cache Expiration Time" : "30 sec",
+          "Update Type" : "Create or Replace Table",
+          "Max Batch Size" : "1",
+          "Include Not Null Constraints" : "true",
+          "Table Stream Creation Parameters" : "",
+          "Record Reader" : "81f35f8e-cc4a-36e0-ab25-7221a7ad53d1",
+          "Table Schema Strategy" : "Use Record Reader",
+          "Schema Name" : "#{Destination Schema}",
+          "Include Default Values" : "false",
+          "Add Column Strategy" : "Alter Table",
+          "Use Table Metadata Cache" : "false",
+          "Alter Column Type Strategy" : "Fail",
+          "Column Removal Strategy" : "Drop Column",
+          "Drop Not Null Strategy" : "Alter Table",
+          "Add Not Null Strategy" : "Alter Table",
+          "Create Stream" : "false",
+          "Modify Primary Key Strategy" : "Alter Table",
+          "Drop Column Strategy" : "Alter Table",
+          "Connection Pool" : "1c249b1a-3267-3930-b7b9-fffa14a09538",
+          "Include Primary Key Constraints" : "true"
+        },
+        "propertyDescriptors" : {
+          "Table Name" : {
+            "displayName" : "Table Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Table Name",
+            "sensitive" : false
+          },
+          "Table Metadata Cache Expiration Time" : {
+            "displayName" : "Table Metadata Cache Expiration Time",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Table Metadata Cache Expiration Time",
+            "sensitive" : false
+          },
+          "Update Type" : {
+            "displayName" : "Update Type",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Update Type",
+            "sensitive" : false
+          },
+          "Max Batch Size" : {
+            "displayName" : "Max Batch Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Max Batch Size",
+            "sensitive" : false
+          },
+          "Include Not Null Constraints" : {
+            "displayName" : "Include Not Null Constraints",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Include Not Null Constraints",
+            "sensitive" : false
+          },
+          "Stream Creation Parameters" : {
+            "displayName" : "Stream Creation Parameters",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stream Creation Parameters",
+            "sensitive" : false
+          },
+          "Removed Column Name Suffix" : {
+            "displayName" : "Removed Column Name Suffix",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Removed Column Name Suffix",
+            "sensitive" : false
+          },
+          "Table Stream Creation Parameters" : {
+            "displayName" : "Table Stream Creation Parameters",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Table Stream Creation Parameters",
+            "sensitive" : false
+          },
+          "Stream Name" : {
+            "displayName" : "Stream Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stream Name",
+            "sensitive" : false
+          },
+          "Record Reader" : {
+            "displayName" : "Record Reader",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Record Reader",
+            "sensitive" : false
+          },
+          "Desired Schema" : {
+            "displayName" : "Desired Schema",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Desired Schema",
+            "sensitive" : false
+          },
+          "Table Schema Strategy" : {
+            "displayName" : "Table Schema Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Table Schema Strategy",
+            "sensitive" : false
+          },
+          "Schema Name" : {
+            "displayName" : "Schema Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Schema Name",
+            "sensitive" : false
+          },
+          "Include Default Values" : {
+            "displayName" : "Include Default Values",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Include Default Values",
+            "sensitive" : false
+          },
+          "Add Column Strategy" : {
+            "displayName" : "Add Column Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Add Column Strategy",
+            "sensitive" : false
+          },
+          "Table Stream Name" : {
+            "displayName" : "Table Stream Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Table Stream Name",
+            "sensitive" : false
+          },
+          "Use Table Metadata Cache" : {
+            "displayName" : "Use Table Metadata Cache",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Use Table Metadata Cache",
+            "sensitive" : false
+          },
+          "Alter Column Type Strategy" : {
+            "displayName" : "Alter Column Type Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Alter Column Type Strategy",
+            "sensitive" : false
+          },
+          "Column Removal Strategy" : {
+            "displayName" : "Column Removal Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Column Removal Strategy",
+            "sensitive" : false
+          },
+          "Column Name Transformation" : {
+            "displayName" : "Column Name Transformation",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Column Name Transformation",
+            "sensitive" : false
+          },
+          "Drop Not Null Strategy" : {
+            "displayName" : "Drop Not Null Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Drop Not Null Strategy",
+            "sensitive" : false
+          },
+          "Add Not Null Strategy" : {
+            "displayName" : "Add Not Null Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Add Not Null Strategy",
+            "sensitive" : false
+          },
+          "Creation Parameters" : {
+            "displayName" : "Creation Parameters",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Creation Parameters",
+            "sensitive" : false
+          },
+          "Create Stream" : {
+            "displayName" : "Create Stream",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Create Stream",
+            "sensitive" : false
+          },
+          "Modify Primary Key Strategy" : {
+            "displayName" : "Modify Primary Key Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Modify Primary Key Strategy",
+            "sensitive" : false
+          },
+          "Drop Column Strategy" : {
+            "displayName" : "Drop Column Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Drop Column Strategy",
+            "sensitive" : false
+          },
+          "Connection Pool" : {
+            "displayName" : "Connection Pool",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Connection Pool",
+            "sensitive" : false
+          },
+          "Include Primary Key Constraints" : {
+            "displayName" : "Include Primary Key Constraints",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Include Primary Key Constraints",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "com.snowflake.openflow.runtime.processors.snowflake.UpdateSnowflakeDatabase",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "runtime-snowflake-processors-nar",
+          "group" : "com.snowflake.openflow.runtime",
+          "version" : "2025.9.4.20"
+        },
+        "comments" : "Alter destination table schema, so that it is up to date with the sheet schema.\nIf the table does not exists, or alteration was not valid - route to create or replace the table.",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "ee4cabc9-4630-3457-9394-f897e8d143cd",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "Update Destination Table Schema",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -200.0,
+          "y" : 1088.0
+        },
+        "properties" : {
+          "Table Name" : "${table.name}",
+          "Table Metadata Cache Expiration Time" : "30 sec",
+          "Update Type" : "Alter Table",
+          "Max Batch Size" : "1",
+          "Include Not Null Constraints" : "true",
+          "Table Stream Creation Parameters" : "",
+          "Record Reader" : "81f35f8e-cc4a-36e0-ab25-7221a7ad53d1",
+          "Table Schema Strategy" : "Use Record Reader",
+          "Schema Name" : "#{Destination Schema}",
+          "Include Default Values" : "false",
+          "Add Column Strategy" : "Alter Table",
+          "Use Table Metadata Cache" : "false",
+          "Alter Column Type Strategy" : "Fail",
+          "Column Removal Strategy" : "Drop Column",
+          "Drop Not Null Strategy" : "Alter Table",
+          "Add Not Null Strategy" : "Alter Table",
+          "Create Stream" : "false",
+          "Modify Primary Key Strategy" : "Alter Table",
+          "Drop Column Strategy" : "Alter Table",
+          "Connection Pool" : "1c249b1a-3267-3930-b7b9-fffa14a09538",
+          "Include Primary Key Constraints" : "true"
+        },
+        "propertyDescriptors" : {
+          "Table Name" : {
+            "displayName" : "Table Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Table Name",
+            "sensitive" : false
+          },
+          "Table Metadata Cache Expiration Time" : {
+            "displayName" : "Table Metadata Cache Expiration Time",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Table Metadata Cache Expiration Time",
+            "sensitive" : false
+          },
+          "Update Type" : {
+            "displayName" : "Update Type",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Update Type",
+            "sensitive" : false
+          },
+          "Max Batch Size" : {
+            "displayName" : "Max Batch Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Max Batch Size",
+            "sensitive" : false
+          },
+          "Include Not Null Constraints" : {
+            "displayName" : "Include Not Null Constraints",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Include Not Null Constraints",
+            "sensitive" : false
+          },
+          "Stream Creation Parameters" : {
+            "displayName" : "Stream Creation Parameters",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stream Creation Parameters",
+            "sensitive" : false
+          },
+          "Removed Column Name Suffix" : {
+            "displayName" : "Removed Column Name Suffix",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Removed Column Name Suffix",
+            "sensitive" : false
+          },
+          "Table Stream Creation Parameters" : {
+            "displayName" : "Table Stream Creation Parameters",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Table Stream Creation Parameters",
+            "sensitive" : false
+          },
+          "Stream Name" : {
+            "displayName" : "Stream Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stream Name",
+            "sensitive" : false
+          },
+          "Record Reader" : {
+            "displayName" : "Record Reader",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Record Reader",
+            "sensitive" : false
+          },
+          "Desired Schema" : {
+            "displayName" : "Desired Schema",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Desired Schema",
+            "sensitive" : false
+          },
+          "Table Schema Strategy" : {
+            "displayName" : "Table Schema Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Table Schema Strategy",
+            "sensitive" : false
+          },
+          "Schema Name" : {
+            "displayName" : "Schema Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Schema Name",
+            "sensitive" : false
+          },
+          "Include Default Values" : {
+            "displayName" : "Include Default Values",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Include Default Values",
+            "sensitive" : false
+          },
+          "Add Column Strategy" : {
+            "displayName" : "Add Column Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Add Column Strategy",
+            "sensitive" : false
+          },
+          "Table Stream Name" : {
+            "displayName" : "Table Stream Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Table Stream Name",
+            "sensitive" : false
+          },
+          "Use Table Metadata Cache" : {
+            "displayName" : "Use Table Metadata Cache",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Use Table Metadata Cache",
+            "sensitive" : false
+          },
+          "Alter Column Type Strategy" : {
+            "displayName" : "Alter Column Type Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Alter Column Type Strategy",
+            "sensitive" : false
+          },
+          "Column Removal Strategy" : {
+            "displayName" : "Column Removal Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Column Removal Strategy",
+            "sensitive" : false
+          },
+          "Column Name Transformation" : {
+            "displayName" : "Column Name Transformation",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Column Name Transformation",
+            "sensitive" : false
+          },
+          "Drop Not Null Strategy" : {
+            "displayName" : "Drop Not Null Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Drop Not Null Strategy",
+            "sensitive" : false
+          },
+          "Add Not Null Strategy" : {
+            "displayName" : "Add Not Null Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Add Not Null Strategy",
+            "sensitive" : false
+          },
+          "Creation Parameters" : {
+            "displayName" : "Creation Parameters",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Creation Parameters",
+            "sensitive" : false
+          },
+          "Create Stream" : {
+            "displayName" : "Create Stream",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Create Stream",
+            "sensitive" : false
+          },
+          "Modify Primary Key Strategy" : {
+            "displayName" : "Modify Primary Key Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Modify Primary Key Strategy",
+            "sensitive" : false
+          },
+          "Drop Column Strategy" : {
+            "displayName" : "Drop Column Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Drop Column Strategy",
+            "sensitive" : false
+          },
+          "Connection Pool" : {
+            "displayName" : "Connection Pool",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Connection Pool",
+            "sensitive" : false
+          },
+          "Include Primary Key Constraints" : {
+            "displayName" : "Include Primary Key Constraints",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Include Primary Key Constraints",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "com.snowflake.openflow.runtime.processors.snowflake.UpdateSnowflakeDatabase",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2025.9.4.20"
+        },
+        "comments" : "Set attribute with name of the destination table that will be used by subsequent processors.",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e8eaa52a-ab6c-3235-bd60-01a654981858",
+        "identifier" : "f2c30aed-1f8c-39ef-822b-52b1e0f7cbd4",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "Set Destination Table Name Attribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -200.0,
+          "y" : 864.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100",
+          "table.name" : "#{Destination Table Prefix}${object.key}_${range.formula:isEmpty():ifElse(${range.sheetname}, ${range.formula})}"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "table.name" : {
+            "displayName" : "table.name",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "table.name",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      } ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min"
+    } ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "success" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "08c85e12-089e-359d-a6a3-dc7266d84e55",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Log Failure",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 568.0,
+        "y" : 48.0
+      },
+      "properties" : {
+        "character-set" : "UTF-8",
+        "Log FlowFile Properties" : "true",
+        "Log Level" : "error",
+        "attributes-to-log-regex" : ".*",
+        "Output Format" : "Line per Attribute",
+        "Log Payload" : "false"
+      },
+      "propertyDescriptors" : {
+        "Log prefix" : {
+          "displayName" : "Log prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log prefix",
+          "sensitive" : false
+        },
+        "character-set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "Log FlowFile Properties" : {
+          "displayName" : "Log FlowFile Properties",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log FlowFile Properties",
+          "sensitive" : false
+        },
+        "Log Level" : {
+          "displayName" : "Log Level",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log Level",
+          "sensitive" : false
+        },
+        "attributes-to-ignore-regex" : {
+          "displayName" : "Attributes to Ignore by Regular Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "attributes-to-ignore-regex",
+          "sensitive" : false
+        },
+        "Attributes to Ignore" : {
+          "displayName" : "Attributes to Ignore",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attributes to Ignore",
+          "sensitive" : false
+        },
+        "Attributes to Log" : {
+          "displayName" : "Attributes to Log",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attributes to Log",
+          "sensitive" : false
+        },
+        "attributes-to-log-regex" : {
+          "displayName" : "Attributes to Log by Regular Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "attributes-to-log-regex",
+          "sensitive" : false
+        },
+        "Output Format" : {
+          "displayName" : "Output Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output Format",
+          "sensitive" : false
+        },
+        "Log Payload" : {
+          "displayName" : "Log Payload",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log Payload",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.LogAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-aws-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "Fetch Excel file from AWS S3 bucket.",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "77df7ee1-9a4b-3485-a99a-52a7b1b05a5b",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Fetch File From S3",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -184.0,
+        "y" : -216.0
+      },
+      "properties" : {
+        "requester-pays" : "false",
+        "Object Key" : "${object.key}",
+        "AWS Credentials Provider service" : "8de3b31b-0a70-3e01-a01c-4ed2fe3a4cbe",
+        "Signer Override" : "Default Signature",
+        "Bucket" : "#{S3 Bucket}",
+        "Communications Timeout" : "30 secs",
+        "Region" : "#{AWS Region}"
+      },
+      "propertyDescriptors" : {
+        "range-length" : {
+          "displayName" : "Range Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "range-length",
+          "sensitive" : false
+        },
+        "range-start" : {
+          "displayName" : "Range Start",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "range-start",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "Endpoint Override URL" : {
+          "displayName" : "Endpoint Override URL",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Endpoint Override URL",
+          "sensitive" : false
+        },
+        "custom-signer-class-name" : {
+          "displayName" : "Custom Signer Class Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "custom-signer-class-name",
+          "sensitive" : false
+        },
+        "requester-pays" : {
+          "displayName" : "Requester Pays",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "requester-pays",
+          "sensitive" : false
+        },
+        "Object Key" : {
+          "displayName" : "Object Key",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Object Key",
+          "sensitive" : false
+        },
+        "AWS Credentials Provider service" : {
+          "displayName" : "AWS Credentials Provider service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "AWS Credentials Provider service",
+          "sensitive" : false
+        },
+        "custom-signer-module-location" : {
+          "displayName" : "Custom Signer Module Location",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "custom-signer-module-location",
+          "resourceDefinition" : {
+            "cardinality" : "MULTIPLE",
+            "resourceTypes" : [ "DIRECTORY", "FILE" ]
+          },
+          "sensitive" : false
+        },
+        "SSL Context Service" : {
+          "displayName" : "SSL Context Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "SSL Context Service",
+          "sensitive" : false
+        },
+        "Signer Override" : {
+          "displayName" : "Signer Override",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Signer Override",
+          "sensitive" : false
+        },
+        "Bucket" : {
+          "displayName" : "Bucket",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Bucket",
+          "sensitive" : false
+        },
+        "Version" : {
+          "displayName" : "Version",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Version",
+          "sensitive" : false
+        },
+        "Communications Timeout" : {
+          "displayName" : "Communications Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Communications Timeout",
+          "sensitive" : false
+        },
+        "Region" : {
+          "displayName" : "Region",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Region",
+          "sensitive" : false
+        },
+        "encryption-service" : {
+          "displayName" : "Encryption Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "encryption-service",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.aws.s3.FetchS3Object",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "Generate flow file telling that data should be ingested. The file is generated based on configured schedule.",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "7d999c3f-6d93-3f0f-9b67-ae43990fab37",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Start Scheduled Ingestion",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -184.0,
+        "y" : -712.0
+      },
+      "properties" : {
+        "character-set" : "UTF-8",
+        "File Size" : "0B",
+        "Batch Size" : "1",
+        "Unique FlowFiles" : "false",
+        "Data Format" : "Text"
+      },
+      "propertyDescriptors" : {
+        "character-set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "File Size" : {
+          "displayName" : "File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Size",
+          "sensitive" : false
+        },
+        "mime-type" : {
+          "displayName" : "Mime Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "mime-type",
+          "sensitive" : false
+        },
+        "generate-ff-custom-text" : {
+          "displayName" : "Custom Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "generate-ff-custom-text",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Unique FlowFiles" : {
+          "displayName" : "Unique FlowFiles",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Unique FlowFiles",
+          "sensitive" : false
+        },
+        "Data Format" : {
+          "displayName" : "Data Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Data Format",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "#{Schedule}",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : {
+    "Microsoft Excel (S3 to Snowflake) Source Parameters" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "inheritedParameterContexts" : [ ],
+      "name" : "Microsoft Excel (S3 to Snowflake) Source Parameters",
+      "parameters" : [ {
+        "description" : "Access Key ID for AWS user that is used to fetch Excel file.",
+        "name" : "AWS Access Key ID",
+        "provided" : false,
+        "sensitive" : true
+      }, {
+        "description" : "AWS region where the S3 bucket resides.",
+        "name" : "AWS Region",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "us-east-2"
+      }, {
+        "description" : "Secret Access Key for AWS user that is used to fetch Excel file.",
+        "name" : "AWS Secret Access Key",
+        "provided" : false,
+        "sensitive" : true
+      } ]
+    },
+    "Microsoft Excel (S3 to Snowflake) Destination Parameters" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "inheritedParameterContexts" : [ ],
+      "name" : "Microsoft Excel (S3 to Snowflake) Destination Parameters",
+      "parameters" : [ {
+        "description" : "The database where data retrieved from Excel file will be persisted. It must already exist in Snowflake.",
+        "name" : "Destination Database",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "skumar"
+      }, {
+        "description" : "The schema where data retrieved from Excel file will be persisted. It must already exist in Snowflake.",
+        "name" : "Destination Schema",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "public"
+      }, {
+        "description" : "Snowflake account name formatted as [organization-name]-[account-name] where data retrieved from Excel file will be persisted.",
+        "name" : "Snowflake Account Identifier",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "SFSENORTHAMERICA-SKUMAR_AWS_US_WEST_2"
+      }, {
+        "description" : "The private key, formatted according to PKCS8 standards and containing standard PEM headers and footers, used in key-pair authentication.",
+        "name" : "Snowflake Private Key",
+        "provided" : false,
+        "sensitive" : true
+      }, {
+        "description" : "The password for the the Snowflake Private Key.",
+        "name" : "Snowflake Private Key Password",
+        "provided" : false,
+        "sensitive" : true
+      }, {
+        "description" : "Snowflake role that is going to be used by the connector.",
+        "name" : "Snowflake Role",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "sysadmin"
+      }, {
+        "description" : "Username for a Snowflake account.",
+        "name" : "Snowflake User",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "openflow"
+      }, {
+        "description" : "Snowflake warehouse used to run queries when inserting data into the destination table.",
+        "name" : "Snowflake Warehouse",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "compute_wh"
+      } ]
+    },
+    "Microsoft Excel (S3 to Snowflake) Ingestion Parameters" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "inheritedParameterContexts" : [ "Microsoft Excel (S3 to Snowflake) Destination Parameters", "Microsoft Excel (S3 to Snowflake) Source Parameters" ],
+      "name" : "Microsoft Excel (S3 to Snowflake) Ingestion Parameters",
+      "parameters" : [ {
+        "description" : "The prefix of the table in the destination schema where data retrieved from Excel file will be persisted. The table will be created automatically by the connector.",
+        "name" : "Destination Table Prefix",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "MSFT"
+      }, {
+        "description" : "Password that protects Excel file.",
+        "name" : "File Password",
+        "provided" : false,
+        "sensitive" : true
+      }, {
+        "description" : "Protection type on the Excel file. Can be either \"UNPROTECTED\" if the file is unprotected, or \"PASSWORD\" if the file is protected with password.",
+        "name" : "Protection Type",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "UNPROTECTED"
+      }, {
+        "description" : "The A1 notation of the comma-separated ranges to retrieve values from. For example: Sheet1!A1:B2,Sheet2!D4:E5,Sheet3. The first row in selected range must represent column names.",
+        "name" : "Ranges",
+        "provided" : false,
+        "sensitive" : false
+      }, {
+        "description" : "The S3 bucket from which the Excel file should be fetched.",
+        "name" : "S3 Bucket",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "snow-afe-skumar"
+      }, {
+        "description" : "List of comma-separated object keys within the S3 bucket that contain Excel files to fetch, e.g. \"file1.xlsx,file2.xlsx\".",
+        "name" : "S3 Object Keys",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "raw/MSFT_ANNUAL_FINANCIALS.xlsx,raw/AAPL_ANNUAL_FROM_FINANCIALS.xlsx"
+      }, {
+        "description" : "Schedule for the connector ingestion.",
+        "name" : "Schedule",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "1 day"
+      } ]
+    }
+  },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "author" : "SHANTANU.GOPE@SNOWFLAKE.COM",
+    "flowIdentifier" : "test22",
+    "timestamp" : 1758738020578
+  }
 }
