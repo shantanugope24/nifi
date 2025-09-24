@@ -49,6 +49,66 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
+        "id" : "a4510b98-dc03-3ec5-830b-b2435695f16d",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1eeb0353-bc77-3cec-afdf-6663b1e10a74",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "Response" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "35daf5c0-32e5-3260-bfa0-8510d6922a1a",
+        "name" : "InvokeHTTP",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 21
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "a4510b98-dc03-3ec5-830b-b2435695f16d",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2cf62edb-bff4-37e6-b616-b2046a3ccd27",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "d363003c-4468-3f72-ab2b-dea90dade942",
+        "name" : "FetchAzureBlobStorage_v12",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 18
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
         "id" : "f91bca02-e793-364a-9aac-8519c5291099",
         "name" : "Create CSV Table",
         "type" : "PROCESSOR"
@@ -137,36 +197,6 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 9
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "a4510b98-dc03-3ec5-830b-b2435695f16d",
-        "name" : "RouteOnAttribute",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "8f1283c6-b5fc-3438-810f-4b717d045ace",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "Response" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "35daf5c0-32e5-3260-bfa0-8510d6922a1a",
-        "name" : "InvokeHTTP",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 15
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -343,6 +373,36 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
+        "id" : "a4510b98-dc03-3ec5-830b-b2435695f16d",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "b34a7783-cacf-3016-9cc3-30f37f81835c",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "35a625c3-1dd4-3da6-823f-8d39b2e9bf5d",
+        "name" : "FetchSFTP",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 20
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
         "id" : "f0b0daea-e90c-3db5-8a7b-21c5264269c5",
         "name" : "PutSnowpipeStreaming",
         "type" : "PROCESSOR"
@@ -365,6 +425,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 12
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "d363003c-4468-3f72-ab2b-dea90dade942",
+        "name" : "FetchAzureBlobStorage_v12",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "e1509503-2f29-3334-99b3-d797eafc83c8",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "e9ad6a62-3ae1-3d3d-8519-cfab7b4b8bce",
+        "name" : "ListAzureBlobStorage_v12",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 17
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -431,13 +521,43 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 5
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "35a625c3-1dd4-3da6-823f-8d39b2e9bf5d",
+        "name" : "FetchSFTP",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "edaf453a-989f-3624-a072-55a6a865e641",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "78e6d04c-11b8-330b-961a-ff64eac0df16",
+        "name" : "ListSFTP",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 19
     } ],
     "controllerServices" : [ {
       "bulletinLevel" : "WARN",
       "bundle" : {
         "artifact" : "nifi-key-service-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "CONTROLLER_SERVICE",
@@ -445,7 +565,7 @@
         "bundle" : {
           "artifact" : "nifi-standard-services-api-nar",
           "group" : "org.apache.nifi",
-          "version" : "2025.8.12.20"
+          "version" : "2025.9.9.20"
         },
         "type" : "org.apache.nifi.key.service.api.PrivateKeyService"
       } ],
@@ -487,7 +607,7 @@
       "bundle" : {
         "artifact" : "nifi-record-serialization-services-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "CONTROLLER_SERVICE",
@@ -495,7 +615,7 @@
         "bundle" : {
           "artifact" : "nifi-standard-services-api-nar",
           "group" : "org.apache.nifi",
-          "version" : "2025.8.12.20"
+          "version" : "2025.9.9.20"
         },
         "type" : "org.apache.nifi.serialization.RecordSetWriterFactory"
       } ],
@@ -656,7 +776,7 @@
       "bundle" : {
         "artifact" : "nifi-record-serialization-services-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "CONTROLLER_SERVICE",
@@ -664,7 +784,7 @@
         "bundle" : {
           "artifact" : "nifi-standard-services-api-nar",
           "group" : "org.apache.nifi",
-          "version" : "2025.8.12.20"
+          "version" : "2025.9.9.20"
         },
         "type" : "org.apache.nifi.serialization.RecordReaderFactory"
       } ],
@@ -802,7 +922,7 @@
       "bundle" : {
         "artifact" : "nifi-aws-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "CONTROLLER_SERVICE",
@@ -810,14 +930,14 @@
         "bundle" : {
           "artifact" : "nifi-aws-service-api-nar",
           "group" : "org.apache.nifi",
-          "version" : "2025.8.12.20"
+          "version" : "2025.9.4.20"
         },
         "type" : "org.apache.nifi.processors.aws.credentials.provider.AwsCredentialsProviderService"
       }, {
         "bundle" : {
           "artifact" : "nifi-aws-service-api-nar",
           "group" : "org.apache.nifi",
-          "version" : "2025.8.12.20"
+          "version" : "2025.9.4.20"
         },
         "type" : "org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderService"
       } ],
@@ -967,7 +1087,7 @@
       "bundle" : {
         "artifact" : "runtime-snowflake-connection-service-nar",
         "group" : "com.snowflake.openflow.runtime",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "CONTROLLER_SERVICE",
@@ -975,7 +1095,7 @@
         "bundle" : {
           "artifact" : "nifi-standard-services-api-nar",
           "group" : "org.apache.nifi",
-          "version" : "2025.8.12.20"
+          "version" : "2025.9.9.20"
         },
         "type" : "org.apache.nifi.dbcp.DBCPService"
       } ],
@@ -1104,7 +1224,7 @@
       "bundle" : {
         "artifact" : "nifi-record-serialization-services-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "CONTROLLER_SERVICE",
@@ -1112,7 +1232,7 @@
         "bundle" : {
           "artifact" : "nifi-standard-services-api-nar",
           "group" : "org.apache.nifi",
-          "version" : "2025.8.12.20"
+          "version" : "2025.9.9.20"
         },
         "type" : "org.apache.nifi.serialization.RecordReaderFactory"
       } ],
@@ -1329,99 +1449,26 @@
     },
     "processGroups" : [ ],
     "processors" : [ {
-      "autoTerminatedRelationships" : [ "failure" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-cipher-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "2bacd73d-9e6d-3e02-b09c-f3ace97e0370",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "EncryptContentAge",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 360.0,
-        "y" : -152.0
-      },
-      "properties" : {
-        "Public Key Source" : "PROPERTIES",
-        "File Encoding" : "BINARY"
-      },
-      "propertyDescriptors" : {
-        "Public Key Recipients" : {
-          "displayName" : "Public Key Recipients",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Public Key Recipients",
-          "resourceDefinition" : {
-            "cardinality" : "SINGLE",
-            "resourceTypes" : [ "TEXT" ]
-          },
-          "sensitive" : true
-        },
-        "Public Key Recipient Resources" : {
-          "displayName" : "Public Key Recipient Resources",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Public Key Recipient Resources",
-          "resourceDefinition" : {
-            "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "URL" ]
-          },
-          "sensitive" : false
-        },
-        "Public Key Source" : {
-          "displayName" : "Public Key Source",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Public Key Source",
-          "sensitive" : false
-        },
-        "File Encoding" : {
-          "displayName" : "File Encoding",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "File Encoding",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.cipher.EncryptContentAge",
-      "yieldDuration" : "1 sec"
-    }, {
       "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
       "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "35daf5c0-32e5-3260-bfa0-8510d6922a1a",
+      "identifier" : "2680563f-ef61-345e-bbb5-bdffbaaa8725",
       "maxBackoffPeriod" : "10 mins",
       "name" : "InvokeHTTP",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -904.0,
-        "y" : -248.0
+        "x" : 1192.0,
+        "y" : 928.0
       },
       "properties" : {
         "Request Content-Encoding" : "DISABLED",
@@ -1720,20 +1767,242 @@
       "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
       "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "3c068492-efcd-3f24-b55a-d0d1f2304e23",
+      "identifier" : "35a625c3-1dd4-3da6-823f-8d39b2e9bf5d",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "FetchSFTP",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -920.0,
+        "y" : 144.0
+      },
+      "properties" : {
+        "Port" : "22",
+        "Create Directory" : "false",
+        "Use Compression" : "false",
+        "Disable Directory Listing" : "false",
+        "Send Keep Alive On Timeout" : "true",
+        "Completion Strategy" : "None",
+        "fetchfiletransfer-notfound-loglevel" : "ERROR",
+        "Connection Timeout" : "30 sec",
+        "Data Timeout" : "30 sec",
+        "Algorithm Negotiation" : "DEFAULT",
+        "Strict Host Key Checking" : "false"
+      },
+      "propertyDescriptors" : {
+        "Port" : {
+          "displayName" : "Port",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Port",
+          "sensitive" : false
+        },
+        "Remote File" : {
+          "displayName" : "Remote File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Remote File",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "Hostname" : {
+          "displayName" : "Hostname",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Hostname",
+          "sensitive" : false
+        },
+        "Create Directory" : {
+          "displayName" : "Create Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Create Directory",
+          "sensitive" : false
+        },
+        "Host Key File" : {
+          "displayName" : "Host Key File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Host Key File",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "FILE" ]
+          },
+          "sensitive" : false
+        },
+        "Use Compression" : {
+          "displayName" : "Use Compression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Use Compression",
+          "sensitive" : false
+        },
+        "Ciphers Allowed" : {
+          "displayName" : "Ciphers Allowed",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Ciphers Allowed",
+          "sensitive" : false
+        },
+        "Message Authentication Codes Allowed" : {
+          "displayName" : "Message Authentication Codes Allowed",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Message Authentication Codes Allowed",
+          "sensitive" : false
+        },
+        "Disable Directory Listing" : {
+          "displayName" : "Disable Directory Listing",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Disable Directory Listing",
+          "sensitive" : false
+        },
+        "Send Keep Alive On Timeout" : {
+          "displayName" : "Send Keep Alive On Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Send Keep Alive On Timeout",
+          "sensitive" : false
+        },
+        "Completion Strategy" : {
+          "displayName" : "Completion Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Completion Strategy",
+          "sensitive" : false
+        },
+        "Private Key Passphrase" : {
+          "displayName" : "Private Key Passphrase",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Private Key Passphrase",
+          "sensitive" : true
+        },
+        "fetchfiletransfer-notfound-loglevel" : {
+          "displayName" : "Log level when file not found",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "fetchfiletransfer-notfound-loglevel",
+          "sensitive" : false
+        },
+        "Connection Timeout" : {
+          "displayName" : "Connection Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Connection Timeout",
+          "sensitive" : false
+        },
+        "Data Timeout" : {
+          "displayName" : "Data Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Data Timeout",
+          "sensitive" : false
+        },
+        "Private Key Path" : {
+          "displayName" : "Private Key Path",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Private Key Path",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "FILE" ]
+          },
+          "sensitive" : false
+        },
+        "Username" : {
+          "displayName" : "Username",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Username",
+          "sensitive" : false
+        },
+        "Move Destination Directory" : {
+          "displayName" : "Move Destination Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Move Destination Directory",
+          "sensitive" : false
+        },
+        "Algorithm Negotiation" : {
+          "displayName" : "Algorithm Negotiation",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Algorithm Negotiation",
+          "sensitive" : false
+        },
+        "Key Exchange Algorithms Allowed" : {
+          "displayName" : "Key Exchange Algorithms Allowed",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Key Exchange Algorithms Allowed",
+          "sensitive" : false
+        },
+        "Strict Host Key Checking" : {
+          "displayName" : "Strict Host Key Checking",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Strict Host Key Checking",
+          "sensitive" : false
+        },
+        "Key Algorithms Allowed" : {
+          "displayName" : "Key Algorithms Allowed",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Key Algorithms Allowed",
+          "sensitive" : false
+        },
+        "Password" : {
+          "displayName" : "Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Password",
+          "sensitive" : true
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.FetchSFTP",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "35daf5c0-32e5-3260-bfa0-8510d6922a1a",
       "maxBackoffPeriod" : "10 mins",
       "name" : "InvokeHTTP",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 752.0,
-        "y" : 272.0
+        "x" : -1128.0,
+        "y" : 336.0
       },
       "properties" : {
         "Request Content-Encoding" : "DISABLED",
@@ -2032,7 +2301,7 @@
       "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -2143,7 +2412,7 @@
       "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -2155,8 +2424,8 @@
       "name" : "ListSFTP",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -944.0,
-        "y" : 88.0
+        "x" : -912.0,
+        "y" : -96.0
       },
       "properties" : {
         "Minimum File Age" : "0 sec",
@@ -2441,7 +2710,7 @@
       "bundle" : {
         "artifact" : "nifi-aws-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -2593,7 +2862,7 @@
           "sensitive" : false
         },
         "AWS Credentials Provider service" : {
-          "displayName" : "AWS Credentials Provider Service",
+          "displayName" : "AWS Credentials Provider service",
           "dynamic" : false,
           "identifiesControllerService" : true,
           "name" : "AWS Credentials Provider service",
@@ -2672,7 +2941,7 @@
       "bundle" : {
         "artifact" : "runtime-snowpipe-processors-nar",
         "group" : "com.snowflake.openflow.runtime",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -2870,7 +3139,7 @@
       "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -2931,72 +3200,13 @@
       "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ "unmatched", "zeroBytes" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "afabacbf-08ab-3483-8b04-8449f1cdef2f",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "RouteOnAttribute",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 1000.0,
-        "y" : 136.0
-      },
-      "properties" : {
-        "Routing Strategy" : "Route to Property name",
-        "csvFiles" : "${filename:endsWith('.csv')}",
-        "zeroBytes" : "${s3.length:equals(0)}"
-      },
-      "propertyDescriptors" : {
-        "Routing Strategy" : {
-          "displayName" : "Routing Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Routing Strategy",
-          "sensitive" : false
-        },
-        "csvFiles" : {
-          "displayName" : "csvFiles",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "csvFiles",
-          "sensitive" : false
-        },
-        "zeroBytes" : {
-          "displayName" : "zeroBytes",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "zeroBytes",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
-      "yieldDuration" : "1 sec"
-    }, {
       "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
         "artifact" : "runtime-snowflake-processors-nar",
         "group" : "com.snowflake.openflow.runtime",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -3247,7 +3457,7 @@
       "bundle" : {
         "artifact" : "nifi-slack-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -3349,7 +3559,7 @@
       "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -3555,9 +3765,110 @@
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
+        "artifact" : "nifi-azure-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d363003c-4468-3f72-ab2b-dea90dade942",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "FetchAzureBlobStorage_v12",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 376.0,
+        "y" : 120.0
+      },
+      "properties" : {
+        "blob-name" : "${azure.blobname}",
+        "container-name" : "${azure.container}",
+        "Client-Side Encryption Key Type" : "NONE"
+      },
+      "propertyDescriptors" : {
+        "range-length" : {
+          "displayName" : "Range Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "range-length",
+          "sensitive" : false
+        },
+        "range-start" : {
+          "displayName" : "Range Start",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "range-start",
+          "sensitive" : false
+        },
+        "blob-name" : {
+          "displayName" : "Blob Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "blob-name",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "Client-Side Encryption Key ID" : {
+          "displayName" : "Client-Side Encryption Key ID",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Client-Side Encryption Key ID",
+          "sensitive" : false
+        },
+        "storage-credentials-service" : {
+          "displayName" : "Storage Credentials",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "storage-credentials-service",
+          "sensitive" : false
+        },
+        "container-name" : {
+          "displayName" : "Container Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "container-name",
+          "sensitive" : false
+        },
+        "Client-Side Encryption Key Type" : {
+          "displayName" : "Client-Side Encryption Key Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Client-Side Encryption Key Type",
+          "sensitive" : false
+        },
+        "Client-Side Encryption Local Key" : {
+          "displayName" : "Client-Side Encryption Local Key",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Client-Side Encryption Local Key",
+          "sensitive" : true
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.azure.storage.FetchAzureBlobStorage_v12",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
         "artifact" : "nifi-aws-nar",
         "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -3632,7 +3943,7 @@
           "sensitive" : false
         },
         "AWS Credentials Provider service" : {
-          "displayName" : "AWS Credentials Provider Service",
+          "displayName" : "AWS Credentials Provider service",
           "dynamic" : false,
           "identifiesControllerService" : true,
           "name" : "AWS Credentials Provider service",
@@ -3713,74 +4024,9 @@
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
-        "artifact" : "nifi-cipher-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2025.8.12.20"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "df733f6f-60bb-3f1c-ab67-59978b872a50",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "DecryptContentAge",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 744.0,
-        "y" : -56.0
-      },
-      "properties" : {
-        "Private Key Source" : "PROPERTIES"
-      },
-      "propertyDescriptors" : {
-        "Private Key Identity Resources" : {
-          "displayName" : "Private Key Identity Resources",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Private Key Identity Resources",
-          "resourceDefinition" : {
-            "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "URL" ]
-          },
-          "sensitive" : false
-        },
-        "Private Key Identities" : {
-          "displayName" : "Private Key Identities",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Private Key Identities",
-          "resourceDefinition" : {
-            "cardinality" : "SINGLE",
-            "resourceTypes" : [ "TEXT" ]
-          },
-          "sensitive" : true
-        },
-        "Private Key Source" : {
-          "displayName" : "Private Key Source",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Private Key Source",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.cipher.DecryptContentAge",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
         "artifact" : "runtime-kafka-nar",
         "group" : "com.snowflake.openflow.runtime",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -3966,13 +4212,144 @@
       "type" : "com.snowflake.openflow.runtime.processors.kafka.PublishKafka",
       "yieldDuration" : "1 sec"
     }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-azure-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2025.9.4.20"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "PRIMARY",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "e9ad6a62-3ae1-3d3d-8519-cfab7b4b8bce",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "ListAzureBlobStorage_v12",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 384.0,
+        "y" : -160.0
+      },
+      "properties" : {
+        "Minimum File Age" : "0 sec",
+        "et-initial-listing-target" : "all",
+        "et-time-window" : "3 hours",
+        "listing-strategy" : "timestamps",
+        "Minimum File Size" : "0 B"
+      },
+      "propertyDescriptors" : {
+        "Minimum File Age" : {
+          "displayName" : "Minimum File Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Minimum File Age",
+          "sensitive" : false
+        },
+        "et-initial-listing-target" : {
+          "displayName" : "Entity Tracking Initial Listing Target",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "et-initial-listing-target",
+          "sensitive" : false
+        },
+        "Maximum File Age" : {
+          "displayName" : "Maximum File Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Age",
+          "sensitive" : false
+        },
+        "record-writer" : {
+          "displayName" : "Record Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "record-writer",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "Maximum File Size" : {
+          "displayName" : "Maximum File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Size",
+          "sensitive" : false
+        },
+        "storage-credentials-service" : {
+          "displayName" : "Storage Credentials",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "storage-credentials-service",
+          "sensitive" : false
+        },
+        "et-time-window" : {
+          "displayName" : "Entity Tracking Time Window",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "et-time-window",
+          "sensitive" : false
+        },
+        "container-name" : {
+          "displayName" : "Container Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "container-name",
+          "sensitive" : false
+        },
+        "blob-name-prefix" : {
+          "displayName" : "Blob Name Prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "blob-name-prefix",
+          "sensitive" : false
+        },
+        "listing-strategy" : {
+          "displayName" : "Listing Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "listing-strategy",
+          "sensitive" : false
+        },
+        "Minimum File Size" : {
+          "displayName" : "Minimum File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Minimum File Size",
+          "sensitive" : false
+        },
+        "et-state-cache" : {
+          "displayName" : "Entity Tracking State Cache",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "et-state-cache",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "1 min",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.azure.storage.ListAzureBlobStorage_v12",
+      "yieldDuration" : "1 sec"
+    }, {
       "autoTerminatedRelationships" : [ "success" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
         "artifact" : "runtime-snowpipe-processors-nar",
         "group" : "com.snowflake.openflow.runtime",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -4170,7 +4547,7 @@
       "bundle" : {
         "artifact" : "runtime-snowflake-processors-nar",
         "group" : "com.snowflake.openflow.runtime",
-        "version" : "2025.8.12.20"
+        "version" : "2025.9.4.20"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -4426,6 +4803,6 @@
   "snapshotMetadata" : {
     "author" : "SHANTANU.GOPE@SNOWFLAKE.COM",
     "flowIdentifier" : "s3connectloadsnow",
-    "timestamp" : 1755723109663
+    "timestamp" : 1758737936444
   }
 }
