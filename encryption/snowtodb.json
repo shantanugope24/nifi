@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1759426466308,
+    "description" : "",
+    "identifier" : "snowtodb",
+    "lastModifiedTimestamp" : 1759426466308,
+    "name" : "snow_to_db",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
